@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="robots" content="noindex">
+  <!--<script src="js/CSInterface.js"></script>-->
+  <script src="js/feather.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/tippy.css">
+  <style media="screen">.dropdown-menu {min-width: 50px;max-width: 128px;margin: 43px 10px 10px -98px;}.container {max-width: 100%;}</style>
+</head>
+
+<!-- NAVBAR -->
+
+<body>
+  <nav class="navbar navbar-dark bg-dark navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col topLeftNav">
+          <div class="form-group" style="margin-left: 7px;">
+              <form id="search">
+                <input class="form-control1" data-live-search="true" type="text" placeholder="Search..." style="font-weight:300;visibility: hidden;" />
+                <div class="search-bar-button" type="text">
+                  <i data-feather="search"></i>
+                </div>
+              </form>
+          </div>
+        </div>
+          <select id="selection" class="selectpicker hide-tick" onchange="location = this.options[this.selectedIndex].value;" style="margin:-3px 10px 0px 0px;padding-top: 1px;">
+            <option value="https://demo.3dmybusiness.com/motion.html" selected>Motion</option>
+            <option value="https://demo.3dmybusiness.com/media.html">Media</option>
+          </select>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- MODAL -->
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <p></p>
+          <button class="btn btn-primary-exit" data-dismiss="modal"><i data-feather="x" style="width:15px;height:15px;"></i></button>
+        </div>
+        <div class="modal-body">
+
+
+          <div class="pricing">
+            <h1>Update Log</h1>
+          </div>
+
+          <div class="modal-check">
+            <div class="container">
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v0.5.0 [beta]</h7><button class="btn btn-primary" title="<strong>9 March, 2018 | </strong>Dokyu gets her first public exposure. But carefully does it! Not all the bolts are screwed tightly, yet."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px 0;background-color: #232324;
+      border-radius: 4px;
+      border-top: 10px solid #232324;
+      border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.0.0</h7><button class="btn btn-primary" title="<strong>20 April, 2018 | </strong>Reversing out of the garage, Dokyu does a stylish about-turn into the loving arms of After Effects."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.2.0</h7><button class="btn btn-primary" title="<strong>1 May, 2018 | </strong>Dokyu finds her voice with a live chatbot. If Dokyu starts creaking, you can leave a message for our team and we'll get back to you sharpish."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.5.0</h7><button class="btn btn-primary" title="<strong>30 July, 2018 | </strong>Dokyu gleams as she earns the badge of becoming a full-stack application! A server running concurrently allows Dokyu to make deliveries to users fast and quietly. Dokyu gets yet a new paint-job upgrade to look even more beautiful and user-friendly."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.6.0</h7><button class="btn btn-primary" title="<strong>20 August, 2018 | </strong>Dokyu's media library gets a big upgrade! The studio library now offers 30 flexible scenes and 30 unique transitions that combine to produce over 2 minutes of animated video. More to come soon..."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.6.5</h7><button class="btn btn-primary" title="<strong>25 October, 2018 | </strong>Dokyu was updated for CC2019 which introduced a new Javascript expression engine. Legacy expressions have been yoinked out and replaced with modern syntax."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.0 [beta]</h7><button class="btn btn-primary" title="<strong>10 March, 2019 | </strong>The Dokyu 2.0 era has arrived. New VFX template libraries produced at our studio will now be published in real-time through the extension."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.0</h7><button class="btn btn-primary" title="<strong>05 April, 2019 | </strong>Dokyu 2.0 launched with a new flagship library we call ‘typography’. It’s a bold and varied collection of text-driven sequences that can be rendered in 16:9, 9:16 and 1:1. Our studio is actively building more VFX libraries, so check back soon."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.5 [beta]</h7><button class="btn btn-primary" title="<strong>28 June, 2019 | </strong>15 motion libraries containing 1520 functional and flexible elements are published to Dokyu. We also set aside time to update to a lighter app framework to ensure we can continue publishing new content without app slow-down."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.5</h7><button class="btn btn-primary" title="<strong>14 July, 2019 | </strong>The 15 brand new libraries are now available for all Dokyu customers. Enjoy! (As Dokyu is a web app, you'll see the libraries in the panel but won't be able to use them until you update.)"><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="modal-terms">
+            <div class="terms" style="margin:0px 0 5px 0;">
+              <h7><a onclick="window.cep.util.openURLInDefaultBrowser('https://3dmybusiness.com/privacy/')"><u>Privacy Policy</u></a> & <a onclick="window.cep.util.openURLInDefaultBrowser('https://3dmybusiness.com/terms/')"><u>Terms</u></a></h7>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- MOTION DEPENDENCIES -->
+
+  <div class="presetOverlay presetColour"></div>
+  <div class="presetOverlay"></div>
+  <div class="scrollbar" id="style-3">
+
+
+      <!-- MOTION -->
+
+      <div id="fullpage">
+        <div class="section" id="section0">
+        
+          
+          <!-- LIBRARIES -->
+          
+                    <!-- UI -->
+                    
+                    <div class="slide" id="slide11">
+                    <div class="scrollable-element">
+                    <div class="gridMacro">
+                    <div class="row">
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion">
+                    <a data-menuanchor="firstPage"><a href="overlays.html">
+                        <img style="height:100%;width:100%;max-height:1080px;
+                                max-width:1920px;border-radius:8px;" src="img/UI_Back.svg" />
+                      </a>
+                    </div>
+                    <div class="cardMetaBack">
+                    <div class="row">
+                      <div class="MetaCentre">Back</div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI001" id="addUI001()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3001();">
+          <img id="gifHover01" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_001/UI_001.jpg" />
+          <audio id="mp3001"> 
+          <source src="UI/MP3/UI_001_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 001</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI002" id="addUI002()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3002();">
+          <img id="gifHover02" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_002/UI_002.jpg" />
+          <audio id="mp3002"> 
+          <source src="UI/MP3/UI_002_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 002</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI003" id="addUI003()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3003();">
+          <img id="gifHover03" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_003/UI_003.jpg" />
+          <audio id="mp3003"> 
+          <source src="UI/MP3/UI_003_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 003</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI004" id="addUI004()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3004();">
+          <img id="gifHover04" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_004/UI_004.jpg" />
+          <audio id="mp3004"> 
+          <source src="UI/MP3/UI_004_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 004</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI005" id="addUI005()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3005();">
+          <img id="gifHover05" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_005/UI_005.jpg" />
+          <audio id="mp3005"> 
+          <source src="UI/MP3/UI_005_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 005</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI006" id="addUI006()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3006();">
+          <img id="gifHover06" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_006/UI_006.jpg" />
+          <audio id="mp3006"> 
+          <source src="UI/MP3/UI_006_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 006</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI007" id="addUI007()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3007();">
+          <img id="gifHover07" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_007/UI_007.jpg" />
+          <audio id="mp3007"> 
+          <source src="UI/MP3/UI_007_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 007</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI008" id="addUI008()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3008();">
+          <img id="gifHover08" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_008/UI_008.jpg" />
+          <audio id="mp3008"> 
+          <source src="UI/MP3/UI_008_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 008</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI009" id="addUI009()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3009();">
+          <img id="gifHover09" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_009/UI_009.jpg" />
+          <audio id="mp3009"> 
+          <source src="UI/MP3/UI_009_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 009</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI010" id="addUI010()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3010();">
+          <img id="gifHover10" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_010/UI_010.jpg" />
+          <audio id="mp3010"> 
+          <source src="UI/MP3/UI_010_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 010</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI011" id="addUI011()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3011();">
+          <img id="gifHover11" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_011/UI_011.jpg" />
+          <audio id="mp3011"> 
+          <source src="UI/MP3/UI_011_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 011</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI012" id="addUI012()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3012();">
+          <img id="gifHover12" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_012/UI_012.jpg" />
+          <audio id="mp3012"> 
+          <source src="UI/MP3/UI_012_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 012</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI013" id="addUI013()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3013();">
+          <img id="gifHover13" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_013/UI_013.jpg" />
+          <audio id="mp3013"> 
+          <source src="UI/MP3/UI_013_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 013</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI014" id="addUI014()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3014();">
+          <img id="gifHover14" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_014/UI_014.jpg" />
+          <audio id="mp3014"> 
+          <source src="UI/MP3/UI_014_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 014</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI015" id="addUI015()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3015();">
+          <img id="gifHover15" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_015/UI_015.jpg" />
+          <audio id="mp3015"> 
+          <source src="UI/MP3/UI_015_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 015</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI016" id="addUI016()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3016();">
+          <img id="gifHover16" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_016/UI_016.jpg" />
+          <audio id="mp3016"> 
+          <source src="UI/MP3/UI_016_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 016</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI017" id="addUI017()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3017();">
+          <img id="gifHover17" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_017/UI_017.jpg" />
+          <audio id="mp3017"> 
+          <source src="UI/MP3/UI_017_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 017</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI018" id="addUI018()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3018();">
+          <img id="gifHover18" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_018/UI_018.jpg" />
+          <audio id="mp3018"> 
+          <source src="UI/MP3/UI_018_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 018</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI019" id="addUI019()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3019();">
+          <img id="gifHover19" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_019/UI_019.jpg" />
+          <audio id="mp3019"> 
+          <source src="UI/MP3/UI_019_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 019</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI020" id="addUI020()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3020();">
+          <img id="gifHover20" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_020/UI_020.jpg" />
+          <audio id="mp3020"> 
+          <source src="UI/MP3/UI_020_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 020</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI021" id="addUI021()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3021();">
+          <img id="gifHover21" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_021/UI_021.jpg" />
+          <audio id="mp3021"> 
+          <source src="UI/MP3/UI_021_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 021</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI022" id="addUI022()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3022();">
+          <img id="gifHover22" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_022/UI_022.jpg" />
+          <audio id="mp3022"> 
+          <source src="UI/MP3/UI_022_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 022</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI023" id="addUI023()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3023();">
+          <img id="gifHover23" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_023/UI_023.jpg" />
+          <audio id="mp3023"> 
+          <source src="UI/MP3/UI_023_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 023</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI024" id="addUI024()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3024();">
+          <img id="gifHover24" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_024/UI_024.jpg" />
+          <audio id="mp3024"> 
+          <source src="UI/MP3/UI_024_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 024</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnUI025" id="addUI025()">
+                    <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3025();">
+          <img id="gifHover25" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="UI/UI_025/UI_025.jpg" />
+          <audio id="mp3025"> 
+          <source src="UI/MP3/UI_025_1.mp3">
+          </audio></div>
+          </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">UI 025</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    </div>
+                    </div>
+                    </div>
+                    </div>      
+
+            
+        <!-- MOTION -->
+        </div>
+        </div>
+        
+       <!-- MOTION DEPENDENCIES -->
+         </div>
+
+         <!-- FOOTER -->  
+         
+         <footer class="footer-distributed" style="left: 0px;">
+           <div class="container">
+             <div class="row">
+               <div class="row justify-content-start bottomLeftNav">
+                 <div class="footer-brands">
+                   <a span class="pixabay" onclick="window.cep.util.openURLInDefaultBrowser('https://pixabay.com')"><img id="pixabay_logo" style="margin-bottom:-2px;width: 47px;opacity: .6;" src="img/pixabay.png"</img></span></a>
+                 </div>
+                 <div class="footer-brands-2">
+                   <button class="btn btn-dark-right-centre" data-toggle="modal" data-target="#myModal"><img id="dokyu_logo" style="margin-bottom: 10px;" src="img/dokyu_footer.png" width="12"</img><span class="beta"></span></button>
+                 </div>
+               </div>
+               <div class="col-md-2.5 ml-md-auto bottomRightButtons">
+                 <div class="footer-notification">
+                   <button class="btn btn-dark-notification" data-toggle="modal" title="<strong>Library contains sound</strong>"><i data-feather="volume-2" style="width:15px;height:15px;color:#fff;"></i></button>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="js/tippy.min.js"></script>
+        <script src="js/tippyTooltips.js"></script>
+        <!-- IMPORT PAGE-SPECIFIC DEPENDENCIES -->
+        <script src="js/import/UI.js"></script>
+        <!-- GIF PAGE-SPECFIIC DEPENDENCIES -->
+        <script src="js/gif/UI.js"></script>
+        <!-- MP3 PAGE-SPECFIIC DEPENDENCIES -->
+        <script src="js/mp3/UI.js"></script>
+        <script src="js/main.js"></script>        
+        <script>
+          feather.replace()
+        </script>
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123173343-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+
+          gtag('config', 'UA-123173343-1');
+        </script>
+      </body>
+
+</html>

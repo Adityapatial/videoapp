@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Chat</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <style>
+    .box1 {
+      margin: 10px 0px;
+      padding: 15px 0px;
+      background: #f7f8fa;
+      line-height: 1.4;
+    }
+
+    #media_show #details td {
+      text-align: right;
+    }
+
+    #media_show #details th {
+      width: 1%;
+      padding-right: 10px;
+    }
+
+    .popover {
+      top: 94px;
+      left: 33.25px;
+      display: block;
+      width: 500px;
+      width: 100%;
+    }
+
+    #target {
+      background: #f7f8fa;
+
+
+      height: 300px;
+      height: 160px;
+      padding: 5px;
+
+      padding: 10px;
+    }
+
+    .Hide {
+      display: none;
+    }
+
+    table {
+      background-color: transparent;
+      width: 100%;
+    }
+
+    #myProgress {
+      width: 100%;
+      background-color: #ddd;
+    }
+
+    #myBar {
+      width: 0%;
+      height: 30px;
+      background-color: #4CAF50;
+    }
+
+    #frameid {
+      max-width: 100%;
+      width: 1026px;
+      height: 577px;
+    }
+
+    video {
+      background-color: #fff !important;
+    }
+  </style>
+
+</head>
+
+<body style="background: #f7f8fa !important;">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div style="background-color: #f7f8fa" class="col-md-9">
+        <!-- <iframe style="height: 300px;width: 600px" id="frameid"> -->
+        <iframe id="frameid" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="col-md-3">
+        <div class="box1">
+          <h3>Download video</h3>
+          <p>Free for commercial use</p>
+          <p>No attribution required</p>
+        </div>
+
+        <div class="box1">
+          <div id="target">
+
+            <table>
+              <tbody>
+                <tr class="">
+                  <td id=file-resolution-large><input type="radio" name="download" value=""></td>
+                  <td>MP4</td>
+                  <td id="File-size-large">2.8 MB</td>
+                </tr>
+                <tr class="">
+                  <td id=file-resolution-medium><input type="radio" name="download" value=""></td>
+                  <td>MP4</td>
+                  <td id="File-size-medium"></td>
+                </tr>
+                <tr class="">
+                  <td id=file-resolution-small><input type="radio" name="download" value=""></td>
+                  <td>MP4</td>
+                  <td id="File-size-small"></td>
+                </tr>
+                <tr class="selected">
+                  <td id=file-resolution-tiny><input type="radio" name="download" value=""></td>
+                  <td>MP4</td>
+                  <td id="File-size-tiny"></td>
+                </tr>
+
+              </tbody>
+            </table>
+            <span id="spnError" style="color: red"></span>
+            <div id="myBar"></div>
+            <span id="myProgress"></span>
+            <a id="btnSubmit" class="btn btn-success btn-block" href="#"><i class="fa fa-download"
+                aria-hidden="true"></i> Download</a>
+          </div>
+          <!-- <p><a id="test1" href="#">Download</a></p> -->
+
+        </div>
+        <div>
+
+
+
+        </div>
+
+        <div class="box1">
+          <table id="details">
+            <tbody>
+              <tr>
+                <th>Media type</th>
+                <td>MP4</td>
+              </tr>
+              <tr>
+                <th>Resolution</th>
+                <td id="video-Resolution">1920×1080</td>
+              </tr>
+              <tr>
+                <th>Duration</th>
+                <td id="video-duration"></td>
+              </tr>
+              <tr>
+                <th>Category</th>
+                <td id="video-category"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
+<!-- <script>
+  $('.Show').click(function () {
+    $('#btnSubmit').show();
+    $('#target').hide(500);
+    $('.Show').hide(0);
+    $('.Hide').show(0);
+  });
+  $('.Hide').click(function () {
+    $('#target').hide(500);
+    $('#btnSubmit').show();
+    $('.Show').show(0);
+    $('.Hide').hide(0);
+  });
+  $('.toggle').click(function () {
+    $('#target').toggle('slow');
+  }); 
+</script> -->
+<script>
+  //var MainVedioUrl;
+  $(document).ready(function () {
+    var tech;
+
+    var getUrlParameter = function getUrlParameter(sParam) {
+      var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+      for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] === sParam) {
+          return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+      }
+    }
+    tech = getUrlParameter('sent');
+    var API_KEY = '1380068-681a468f1e3c1982147bce230';
+    var URL = "https://pixabay.com/api/videos?key=" + API_KEY + "&id=" + tech;
+    $.getJSON(URL, function (data) {
+      if (parseInt(data.totalHits) > 0)
+        $.each(data.hits, function (i, hit) {
+          debugger
+          var vedioLarge = hit.videos.large.url;
+          var vedioMedium = hit.videos.medium.url;
+          var vedioSmall = hit.videos.small.url;
+          var vedioTiny = hit.videos.tiny.url;
+          $("#file-resolution-large input:radio").val(vedioLarge);
+          $("#file-resolution-medium input:radio").val(vedioMedium);
+          $("#file-resolution-small input:radio").val(vedioSmall);
+          $("#file-resolution-tiny input:radio").val(vedioTiny);
+
+          $("#file-resolution-large input:first-child").after(' ' + hit.videos.large.width + 'x' + hit.videos.large.height);
+          $("#file-resolution-medium input:first-child").after(' ' + hit.videos.medium.width + 'x' + hit.videos.medium.height);
+          $("#file-resolution-small input:first-child").after(' ' + hit.videos.small.width + 'x' + hit.videos.small.height);
+          $("#file-resolution-tiny input:first-child").after(' ' + hit.videos.tiny.width + 'x' + hit.videos.tiny.height);
+
+          var LargeVedioSize = formatBytes(hit.videos.large.size);
+          var MediumVedioSize = formatBytes(hit.videos.medium.size);
+          var SmallVedioSize = formatBytes(hit.videos.small.size);
+          var TinyVedioSize = formatBytes(hit.videos.tiny.size);
+
+          $("#File-size-large").html(LargeVedioSize);
+          $("#File-size-medium").html(MediumVedioSize);
+          $("#File-size-small").html(SmallVedioSize);
+          $("#File-size-tiny").html(TinyVedioSize);
+
+          $('#video-duration').html(hit.duration);
+          $('#video-category').html(hit.tags);
+          $('#video-Resolution').html(hit.videos.large.width + 'x' + hit.videos.large.height);
+
+          $('#frameid').attr('src', vedioLarge);
+
+          console.log(hit.pageURL);
+        });
+      else
+        console.log('No hits');
+    });
+  });
+
+  function formatBytes(bytes, decimals) {
+    if (bytes == 0) return '0 Bytes';
+    var k = 1024,
+      dm = decimals <= 0 ? 0 : decimals || 2,
+      sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
+      i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+  }
+
+  function progress(percent, $element) {
+    var progressBarWidth = percent * $element.width() / 100;
+    console.log(progressBarWidth);
+    var elem = document.getElementById("myBar");
+    var elemText = document.getElementById("myProgress");
+    elem.style.width = percent + '%';
+    var percent1 = Math.round(percent);
+    $('#myProgress').html(percent1 + '%');
+  }
+  $(document).ready(function () {
+    $('#btnSubmit').click(function () {
+      var radioValue = $("input[name='download']:checked").val();
+      if (radioValue == null) {
+        $('#spnError').html('Please select video size');
+        return false;
+      }
+      var CurrentVideo = $("input[name='download']:checked").val();
+      window.location.href = CurrentVideo + '&download=1';
+      // Download file 2
+      var oReq = new XMLHttpRequest();
+      oReq.addEventListener("progress", updateProgress, false);
+      oReq.addEventListener("load", transferComplete, false);
+      oReq.addEventListener("error", transferFailed, false);
+      oReq.addEventListener("abort", transferCanceled, false);
+      oReq.open("GET", CurrentVideo + '&download=1', true);
+      oReq.send();
+    });
+    $("input[name='download']").change(function () {
+      $('#spnError').html('');
+      var elem = document.getElementById("myBar");
+      elem.style.width = 0;
+      $('#myProgress').html('');
+    });
+  });
+
+  // progress on transfers from the server to the client (downloads)
+  function updateProgress(oEvent) {
+    if (oEvent.lengthComputable) {
+      var percentComplete = oEvent.loaded / oEvent.total;
+      console.log(percentComplete);
+      progress(percentComplete * 100, $('#progressBar'));
+    } else {
+      // Unable to compute progress information since the total size is unknown
+    }
+  }
+  function transferComplete(evt) {
+    debugger
+    console.log("The transfer is complete.");
+    //$('#result').html(evt.srcElement.response);
+    console.log(evt);
+  }
+  function transferFailed(evt) {
+    console.log("An error occurred while transferring the file.");
+  }
+  function transferCanceled(evt) {
+    console.log("The transfer has been canceled by the user.");
+  }
+</script>

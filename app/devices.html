@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="robots" content="noindex">
+  <!--<script src="js/CSInterface.js"></script>-->
+  <script src="js/feather.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/tippy.css">
+  <style media="screen">.dropdown-menu {min-width: 50px;max-width: 128px;margin: 43px 10px 10px -98px;}.container {max-width: 100%;}</style>
+</head>
+
+<!-- NAVBAR -->
+
+<body>
+  <nav class="navbar navbar-dark bg-dark navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col topLeftNav">
+          <div class="form-group" style="margin-left: 7px;">
+              <form id="search">
+                <input class="form-control1" data-live-search="true" type="text" placeholder="Search..." style="font-weight:300;visibility: hidden;" />
+                <div class="search-bar-button" type="text">
+                  <i data-feather="search"></i>
+                </div>
+              </form>
+          </div>
+        </div>
+          <select id="selection" class="selectpicker hide-tick" onchange="location = this.options[this.selectedIndex].value;" style="margin:-3px 10px 0px 0px;padding-top: 1px;">
+            <option value="https://demo.3dmybusiness.com/motion.html" selected>Motion</option>
+            <option value="https://demo.3dmybusiness.com/media.html">Media</option>
+          </select>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- MODAL -->
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <p></p>
+          <button class="btn btn-primary-exit" data-dismiss="modal"><i data-feather="x" style="width:15px;height:15px;"></i></button>
+        </div>
+        <div class="modal-body">
+
+
+          <div class="pricing">
+            <h1>Update Log</h1>
+          </div>
+
+          <div class="modal-check">
+            <div class="container">
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v0.5.0 [beta]</h7><button class="btn btn-primary" title="<strong>9 March, 2018 | </strong>Dokyu gets her first public exposure. But carefully does it! Not all the bolts are screwed tightly, yet."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px 0;background-color: #232324;
+      border-radius: 4px;
+      border-top: 10px solid #232324;
+      border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.0.0</h7><button class="btn btn-primary" title="<strong>20 April, 2018 | </strong>Reversing out of the garage, Dokyu does a stylish about-turn into the loving arms of After Effects."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.2.0</h7><button class="btn btn-primary" title="<strong>1 May, 2018 | </strong>Dokyu finds her voice with a live chatbot. If Dokyu starts creaking, you can leave a message for our team and we'll get back to you sharpish."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.5.0</h7><button class="btn btn-primary" title="<strong>30 July, 2018 | </strong>Dokyu gleams as she earns the badge of becoming a full-stack application! A server running concurrently allows Dokyu to make deliveries to users fast and quietly. Dokyu gets yet a new paint-job upgrade to look even more beautiful and user-friendly."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.6.0</h7><button class="btn btn-primary" title="<strong>20 August, 2018 | </strong>Dokyu's media library gets a big upgrade! The studio library now offers 30 flexible scenes and 30 unique transitions that combine to produce over 2 minutes of animated video. More to come soon..."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.6.5</h7><button class="btn btn-primary" title="<strong>25 October, 2018 | </strong>Dokyu was updated for CC2019 which introduced a new Javascript expression engine. Legacy expressions have been yoinked out and replaced with modern syntax."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.0 [beta]</h7><button class="btn btn-primary" title="<strong>10 March, 2019 | </strong>The Dokyu 2.0 era has arrived. New VFX template libraries produced at our studio will now be published in real-time through the extension."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.0</h7><button class="btn btn-primary" title="<strong>05 April, 2019 | </strong>Dokyu 2.0 launched with a new flagship library we call ‘typography’. It’s a bold and varied collection of text-driven sequences that can be rendered in 16:9, 9:16 and 1:1. Our studio is actively building more VFX libraries, so check back soon."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.5 [beta]</h7><button class="btn btn-primary" title="<strong>28 June, 2019 | </strong>15 motion libraries containing 1520 functional and flexible elements are published to Dokyu. We also set aside time to update to a lighter app framework to ensure we can continue publishing new content without app slow-down."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.5</h7><button class="btn btn-primary" title="<strong>14 July, 2019 | </strong>The 15 brand new libraries are now available for all Dokyu customers. Enjoy! (As Dokyu is a web app, you'll see the libraries in the panel but won't be able to use them until you update.)"><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="modal-terms">
+            <div class="terms" style="margin:0px 0 5px 0;">
+              <h7><a onclick="window.cep.util.openURLInDefaultBrowser('https://3dmybusiness.com/privacy/')"><u>Privacy Policy</u></a> & <a onclick="window.cep.util.openURLInDefaultBrowser('https://3dmybusiness.com/terms/')"><u>Terms</u></a></h7>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- MOTION DEPENDENCIES -->
+
+  <div class="presetOverlay presetColour"></div>
+  <div class="presetOverlay"></div>
+  <div class="scrollbar" id="style-3">
+
+
+      <!-- MOTION -->
+
+      <div id="fullpage">
+        <div class="section" id="section0">
+        
+          
+          <!-- LIBRARIES -->
+          
+                          <!-- DEVICES -->
+
+                          <div class="slide" id="slide6">
+              <div class="scrollable-element">
+                <div class="gridMacro">
+                  <div class="row">
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion">
+                          <a data-menuanchor="firstPage"><a href="motion.html">
+                              <img style="height:100%;width:100%;max-height:1080px;
+                                      max-width:1920px;border-radius:8px;" src="img/UI_Back.svg" />
+                            </a>
+                        </div>
+                        <div class="cardMetaBack">
+                          <div class="row">
+                            <div class="MetaCentre">Back</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice001" id="addDevice001()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover01" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_001/device_001.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">2</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice002" id="addDevice002()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover02" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_002/device_002.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">2</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice003" id="addDevice003()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover03" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_003/device_003.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">3</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice004" id="addDevice004()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover04" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_004/device_004.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice005" id="addDevice005()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover05" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_005/device_005.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice006" id="addDevice006()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover06" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_006/device_006.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">2</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice007" id="addDevice007()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover07" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_007/device_007.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">2</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">2</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice008" id="addDevice008()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover08" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_008/device_008.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">3</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice009" id="addDevice009()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover09" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_009/device_009.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice010" id="addDevice010()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover10" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_010/device_010.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">4</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">2</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice011" id="addDevice011()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover11" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_011/device_011.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">2</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice012" id="addDevice012()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover12" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_012/device_012.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">2</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice013" id="addDevice013()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover13" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_013/device_013.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">3</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice014" id="addDevice014()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover14" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_014/device_014.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice015" id="addDevice015()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover15" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_015/device_015.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice016" id="addDevice016()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover16" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_016/device_016.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">2</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice017" id="addDevice017()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover17" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_017/device_017.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">2</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">2</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice018" id="addDevice018()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover18" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_018/device_018.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">2</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">2</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice019" id="addDevice019()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover19" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_019/device_019.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice020" id="addDevice020()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover20" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_020/device_020.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">4</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice021" id="addDevice021()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover21" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_021/device_021.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">2</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice022" id="addDevice022()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover22" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_022/device_022.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">2</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice023" id="addDevice023()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover23" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_023/device_023.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">3</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice024" id="addDevice024()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover24" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_024/device_024.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice025" id="addDevice025()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover25" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_025/device_025.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice026" id="addDevice026()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover26" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_026/device_026.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">2</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice027" id="addDevice027()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover27" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_027/device_027.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">2</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">2</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice028" id="addDevice028()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover28" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_028/device_028.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice029" id="addDevice029()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover29" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_029/device_029.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                      <div class="col">
+                        <div class="cardMotion" id="btnDevice030" id="addDevice030()">
+                          <a data-menuanchor="firstPage">
+                            <img id="gifHover30" style="height:100%;width:100%;max-height:1080px;
+                            max-width:1920px;border-radius:8px 8px 0 0;" src="devices/device_030/device_030.jpg" />
+                        </a>
+                        </div>
+                        <div class="cardMeta">
+                          <div class="row">
+                            <div class="MetaOne"></div>
+                            <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                              <span class="stackIt">
+                                <i data-feather="clock" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">6</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="image" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">1</div>
+                              </span>
+                              <span class="stackIt">
+                                <i data-feather="type" style="width:15px;height:15px;"></i>
+                                <div class="MetaText">4</div>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+
+            
+        <!-- MOTION -->
+        </div>
+        </div>
+        
+       <!-- MOTION DEPENDENCIES -->
+         </div>
+
+        <!-- FOOTER -->
+
+        <footer class="footer-distributed" style="left: 0px;">
+          <div class="container">
+            <div class="row">
+              <div class="row justify-content-start bottomLeftNav">
+                <div class="footer-brands">
+                  <a span class="pixabay" onclick="window.cep.util.openURLInDefaultBrowser('https://pixabay.com')"><img id="pixabay_logo" style="margin-bottom:-2px;width: 47px;opacity: .6;" src="img/pixabay.png"</img></span></a>
+                </div>
+                <div class="footer-brands-2">
+                  <button class="btn btn-dark-right-centre" data-toggle="modal" data-target="#myModal"><img id="dokyu_logo" style="margin-bottom: 10px;" src="img/dokyu_footer.png" width="12"</img><span class="beta"></span></button>
+                </div>
+              </div>
+              <div class="col-md-2.5 ml-md-auto bottomRightButtons">
+              </div>
+            </div>
+          </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="js/tippy.min.js"></script>
+        <script src="js/tippyTooltips.js"></script>
+        <!-- IMPORT PAGE-SPECIFIC DEPENDENCIES -->
+        <script src="js/import/devices.js"></script>
+        <!-- GIF PAGE-SPECFIIC DEPENDENCIES -->
+        <script src="js/gif/devices.js"></script>
+        <!-- MP3 PAGE-SPECFIIC DEPENDENCIES -->
+        <script src="js/main.js"></script>        
+        <script>
+          feather.replace()
+        </script>
+                
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123173343-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+
+          gtag('config', 'UA-123173343-1');
+        </script>
+      </body>
+
+</html>

@@ -1,0 +1,3270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="robots" content="noindex">
+  <!--<script src="js/CSInterface.js"></script>-->
+  <script src="js/feather.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/tippy.css">
+  <style media="screen">.dropdown-menu {min-width: 50px;max-width: 128px;margin: 43px 10px 10px -98px;}.container {max-width: 100%;}</style>
+</head>
+
+<!-- NAVBAR -->
+
+<body>
+  <nav class="navbar navbar-dark bg-dark navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col topLeftNav">
+          <div class="form-group" style="margin-left: 7px;">
+              <form id="search">
+                <input class="form-control1" data-live-search="true" type="text" placeholder="Search..." style="font-weight:300;visibility: hidden;" />
+                <div class="search-bar-button" type="text">
+                  <i data-feather="search"></i>
+                </div>
+              </form>
+          </div>
+        </div>
+          <select id="selection" class="selectpicker hide-tick" onchange="location = this.options[this.selectedIndex].value;" style="margin:-3px 10px 0px 0px;padding-top: 1px;">
+            <option value="https://demo.3dmybusiness.com/motion.html" selected>Motion</option>
+            <option value="https://demo.3dmybusiness.com/media.html">Media</option>
+          </select>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- MODAL -->
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <p></p>
+          <button class="btn btn-primary-exit" data-dismiss="modal"><i data-feather="x" style="width:15px;height:15px;"></i></button>
+        </div>
+        <div class="modal-body">
+
+
+          <div class="pricing">
+            <h1>Update Log</h1>
+          </div>
+
+          <div class="modal-check">
+            <div class="container">
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v0.5.0 [beta]</h7><button class="btn btn-primary" title="<strong>9 March, 2018 | </strong>Dokyu gets her first public exposure. But carefully does it! Not all the bolts are screwed tightly, yet."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px 0;background-color: #232324;
+      border-radius: 4px;
+      border-top: 10px solid #232324;
+      border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.0.0</h7><button class="btn btn-primary" title="<strong>20 April, 2018 | </strong>Reversing out of the garage, Dokyu does a stylish about-turn into the loving arms of After Effects."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.2.0</h7><button class="btn btn-primary" title="<strong>1 May, 2018 | </strong>Dokyu finds her voice with a live chatbot. If Dokyu starts creaking, you can leave a message for our team and we'll get back to you sharpish."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.5.0</h7><button class="btn btn-primary" title="<strong>30 July, 2018 | </strong>Dokyu gleams as she earns the badge of becoming a full-stack application! A server running concurrently allows Dokyu to make deliveries to users fast and quietly. Dokyu gets yet a new paint-job upgrade to look even more beautiful and user-friendly."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.6.0</h7><button class="btn btn-primary" title="<strong>20 August, 2018 | </strong>Dokyu's media library gets a big upgrade! The studio library now offers 30 flexible scenes and 30 unique transitions that combine to produce over 2 minutes of animated video. More to come soon..."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.6.5</h7><button class="btn btn-primary" title="<strong>25 October, 2018 | </strong>Dokyu was updated for CC2019 which introduced a new Javascript expression engine. Legacy expressions have been yoinked out and replaced with modern syntax."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.0 [beta]</h7><button class="btn btn-primary" title="<strong>10 March, 2019 | </strong>The Dokyu 2.0 era has arrived. New VFX template libraries produced at our studio will now be published in real-time through the extension."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.0</h7><button class="btn btn-primary" title="<strong>05 April, 2019 | </strong>Dokyu 2.0 launched with a new flagship library we call ‘typography’. It’s a bold and varied collection of text-driven sequences that can be rendered in 16:9, 9:16 and 1:1. Our studio is actively building more VFX libraries, so check back soon."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.5 [beta]</h7><button class="btn btn-primary" title="<strong>28 June, 2019 | </strong>15 motion libraries containing 1520 functional and flexible elements are published to Dokyu. We also set aside time to update to a lighter app framework to ensure we can continue publishing new content without app slow-down."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.5</h7><button class="btn btn-primary" title="<strong>14 July, 2019 | </strong>The 15 brand new libraries are now available for all Dokyu customers. Enjoy! (As Dokyu is a web app, you'll see the libraries in the panel but won't be able to use them until you update.)"><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="modal-terms">
+            <div class="terms" style="margin:0px 0 5px 0;">
+              <h7><a onclick="window.cep.util.openURLInDefaultBrowser('https://3dmybusiness.com/privacy/')"><u>Privacy Policy</u></a> & <a onclick="window.cep.util.openURLInDefaultBrowser('https://3dmybusiness.com/terms/')"><u>Terms</u></a></h7>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- MOTION DEPENDENCIES -->
+
+  <div class="presetOverlay presetColour"></div>
+  <div class="presetOverlay"></div>
+  <div class="scrollbar" id="style-3">
+
+
+      <!-- MOTION -->
+
+      <div id="fullpage">
+        <div class="section" id="section0">
+        
+          
+          <!-- LIBRARIES -->
+          
+                                <!-- TYPOGRAPHY 1:1 -->
+
+                                <div class="slide" id="slide4">
+            <div class="scrollable-element">
+              <div class="gridMacro">
+                <div class="row">
+
+                  <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                      <div class="cardMotion">
+                        <a data-menuanchor="firstPage"><a href="aspect_ratio.html">
+                            <img style="height:100%;width:100%;max-height:1080px;
+                                              max-width:1920px;border-radius:8px;" src="img/UI_Back.svg" />
+                          </a>
+                      </div>
+                      <div class="cardMetaBack">
+                        <div class="row">
+                          <div class="MetaCentre">Back</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType101" onclick="addType101()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover01" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_001/scene_001_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">4</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType102" onclick="addType102()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover02" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_002/scene_002_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">3</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType103" onclick="addType103()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover03" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_003/scene_003_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType104" onclick="addType104()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover04" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_004/scene_004_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType105" onclick="addType105()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover05" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_005/scene_005_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType106" onclick="addType106()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover06" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_006/scene_006_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType107" onclick="addType107()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover07" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_007/scene_007_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType108" onclick="addType108()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover08" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_008/scene_008_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">3</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType109" onclick="addType109()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover09" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_009/scene_009_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType110" onclick="addType110()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover10" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_010/scene_010_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">3</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType111" onclick="addType111()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover11" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_011/scene_011_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">7</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType112" onclick="addType112()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover12" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_012/scene_012_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType113" onclick="addType113()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover13" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_013/scene_013_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">3</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType114" onclick="addType114()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover14" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_014/scene_014_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType115" onclick="addType115()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover15" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_015/scene_015_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType116" onclick="addType116()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover16" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_016/scene_016_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType117" onclick="addType117()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover17" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_017/scene_017_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType118" onclick="addType118()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover18" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_018/scene_018_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType119" onclick="addType119()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover19" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_019/scene_019_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType120" onclick="addType120()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover20" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_020/scene_020_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">5</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType121" onclick="addType121()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover21" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_021/scene_021_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType122" onclick="addType122()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover22" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_022/scene_022_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType123" onclick="addType123()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover23" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_023/scene_023_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">3</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType124" onclick="addType124()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover24" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_024/scene_024_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">4</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType125" onclick="addType125()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover25" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_025/scene_025_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">8</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType126" onclick="addType126()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover26" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_026/scene_026_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType127" onclick="addType127()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover27" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_027/scene_027_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">4</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType128" onclick="addType128()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover28" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_028/scene_028_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType129" onclick="addType129()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover29" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_029/scene_029_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType130" onclick="addType130()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover30" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_030/scene_030_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">3</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType131" onclick="addType131()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover31" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_031/scene_031_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType132" onclick="addType132()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover32" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_032/scene_032_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType133" onclick="addType133()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover33" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_033/scene_033_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">4</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">3</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType134" onclick="addType134()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover34" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_034/scene_034_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType135" onclick="addType135()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover35" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_035/scene_035_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType136" onclick="addType136()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover36" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_036/scene_036_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">4</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType137" onclick="addType137()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover37" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_037/scene_037_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">22</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType138" onclick="addType138()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover38" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_038/scene_038_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType139" onclick="addType139()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover39" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_039/scene_039_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType140" onclick="addType140()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover40" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_040/scene_040_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">6</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType141" onclick="addType141()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover41" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_041/scene_041_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType142" onclick="addType142()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover42" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_042/scene_042_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType143" onclick="addType143()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover43" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_043/scene_043_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType144" onclick="addType144()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover44" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_044/scene_044_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType145" onclick="addType145()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover45" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_045/scene_045_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType146" onclick="addType146()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover46" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_046/scene_046_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">3</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType147" onclick="addType147()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover47" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_047/scene_047_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType148" onclick="addType148()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover48" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_048/scene_048_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">6</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType149" onclick="addType149()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover49" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_049/scene_049_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType150" onclick="addType150()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover50" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_050/scene_050_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">5</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType151" onclick="addType151()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover51" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_051/scene_051_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType152" onclick="addType152()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover52" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_052/scene_052_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">3</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType153" onclick="addType153()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover53" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_053/scene_053_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType154" onclick="addType154()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover54" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_054/scene_054_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType155" onclick="addType155()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover55" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_055/scene_055_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType156" onclick="addType156()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover56" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_056/scene_056_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">3</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType157" onclick="addType157()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover57" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_057/scene_057_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType158" onclick="addType158()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover58" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_058/scene_058_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">4</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">3</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType159" onclick="addType159()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover59" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_059/scene_059_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">3</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType160" onclick="addType160()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover60" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_060/scene_060_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType161" onclick="addType161()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover61" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_061/scene_061_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType162" onclick="addType162()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover62" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_062/scene_062_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType163" onclick="addType163()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover63" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_063/scene_063_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">3</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType164" onclick="addType164()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover64" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_064/scene_064_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType165" onclick="addType165()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover65" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_065/scene_065_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType166" onclick="addType166()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover66" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_066/scene_066_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType167" onclick="addType167()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover67" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_067/scene_067_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType168" onclick="addType168()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover68" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_068/scene_068_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">3</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType169" onclick="addType169()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover69" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_069/scene_069_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType170" onclick="addType170()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover70" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_070/scene_070_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType171" onclick="addType171()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover71" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_071/scene_071_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType172" onclick="addType172()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover72" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_072/scene_072_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType173" onclick="addType173()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover73" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_073/scene_073_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">3</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType174" onclick="addType174()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover74" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_074/scene_074_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType175" onclick="addType175()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover75" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_075/scene_075_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType176" onclick="addType176()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover76" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_076/scene_076_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType177" onclick="addType177()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover77" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_077/scene_077_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType178" onclick="addType178()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover78" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_078/scene_078_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType179" onclick="addType179()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover79" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_079/scene_079_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType180" onclick="addType180()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover80" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_080/scene_080_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">3</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType181" onclick="addType181()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover81" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_081/scene_081_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType182" onclick="addType182()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover82" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_082/scene_082_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">3</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType183" onclick="addType183()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover83" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_083/scene_083_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType184" onclick="addType184()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover84" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_084/scene_084_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">3</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType185" onclick="addType185()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover85" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_085/scene_085_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">3</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType186" onclick="addType186()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover86" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_086/scene_086_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType187" onclick="addType187()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover87" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_087/scene_087_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType188" onclick="addType188()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover88" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_088/scene_088_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType189" onclick="addType189()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover89" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_089/scene_089_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType190" onclick="addType190()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover90" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_090/scene_090_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">3</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType191" onclick="addType191()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover91" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_091/scene_091_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">4</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType192" onclick="addType192()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover92" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_092/scene_092_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType193" onclick="addType193()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover93" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_093/scene_093_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType194" onclick="addType194()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover94" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_094/scene_094_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">3</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType195" onclick="addType195()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover95" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_095/scene_095_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">4</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType196" onclick="addType196()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover96" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_096/scene_096_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType197" onclick="addType197()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover97" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_097/scene_097_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType198" onclick="addType198()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover98" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_098/scene_098_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">2</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType199" onclick="addType199()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover99" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_099/scene_099_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">1</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">3</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="col">
+                      <div class="cardMotion" id="btnType200" onclick="addType200()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover100" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="typography/scene_100/scene_100_1_1.jpg" />
+                      </a>
+                      </div>
+                      <div class="cardMeta">
+                        <div class="row">
+                          <div class="MetaOne"></div>
+                          <div class="MetaTwo" title="Scene duration [seconds]<br>Photo placeholders<br>Text placeholders">
+                            <span class="stackIt">
+                            <i data-feather="clock" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">~</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="image" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">0</div>
+                          </span>
+                            <span class="stackIt">
+                            <i data-feather="type" style="width:15px;height:15px;"></i>
+                            <div class="MetaText">3</div>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+
+            </div>
+          </div>        
+
+            
+        <!-- MOTION -->
+        </div>
+        </div>
+        
+       <!-- MOTION DEPENDENCIES -->
+         </div>
+
+        <!-- FOOTER -->
+
+        <footer class="footer-distributed" style="left: 0px;">
+          <div class="container">
+            <div class="row">
+              <div class="row justify-content-start bottomLeftNav">
+                <div class="footer-brands">
+                  <a span class="pixabay" onclick="window.cep.util.openURLInDefaultBrowser('https://pixabay.com')"><img id="pixabay_logo" style="margin-bottom:-2px;width: 47px;opacity: .6;" src="img/pixabay.png"</img></span></a>
+                </div>
+                <div class="footer-brands-2">
+                  <button class="btn btn-dark-right-centre" data-toggle="modal" data-target="#myModal"><img id="dokyu_logo" style="margin-bottom: 10px;" src="img/dokyu_footer.png" width="12"</img><span class="beta"></span></button>
+                </div>
+              </div>
+              <div class="col-md-2.5 ml-md-auto bottomRightButtons">
+              </div>
+            </div>
+          </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="js/tippy.min.js"></script>
+        <script src="js/tippyTooltips.js"></script>
+        <!-- IMPORT PAGE-SPECIFIC DEPENDENCIES -->
+        <script src="js/import/typography11.js"></script>
+        <!-- GIF PAGE-SPECFIIC DEPENDENCIES -->
+        <script src="js/gif/typography11.js"></script>
+        <!-- MP3 PAGE-SPECFIIC DEPENDENCIES -->
+        <script src="js/main.js"></script>        
+        <script>
+          feather.replace()
+        </script>
+                
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123173343-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+
+          gtag('config', 'UA-123173343-1');
+        </script>
+      </body>
+
+</html>

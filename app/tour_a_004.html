@@ -1,0 +1,1823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="robots" content="noindex">
+  <!--<script src="js/CSInterface.js"></script>-->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/tippyTour.css">
+  <style media="screen">.dropdown-menu {min-width: 50px;max-width: 128px;margin: 43px 10px 10px -98px;}.container {max-width: 100%;}</style>
+</head>
+
+<!-- NAVBAR -->
+
+<body onload="insertLicense();">
+  <nav class="navbar navbar-dark bg-dark navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col topLeftNav">
+          <div class="form-group" style="margin-left: 7px;">
+              <form id="search">
+                <input class="form-control1" data-live-search="true" type="text" placeholder="Search..." style="font-weight:300;visibility: hidden;" />
+                <div class="search-bar-button" type="text">
+                  <i data-feather="search"></i>
+                </div>
+              </form>
+          </div>
+        </div>
+          <select id="selection" class="selectpicker hide-tick" onchange="location = this.options[this.selectedIndex].value;" style="margin:-3px 10px 0px 0px;padding-top: 1px;">
+            <option value="https://demo.3dmybusiness.com/motion.html" selected>Motion</option>
+            <option value="https://demo.3dmybusiness.com/media.html">Media</option>
+          </select>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- MODAL -->
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <p></p>
+          <button class="btn btn-primary-exit" data-dismiss="modal"><i data-feather="x" style="width:15px;height:15px;"></i></button>
+        </div>
+        <div class="modal-body">
+
+
+          <div class="pricing">
+            <h1>Update Log</h1>
+          </div>
+
+          <div class="modal-check">
+            <div class="container">
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v0.5.0 [beta]</h7><button class="btn btn-primary" title="<strong>9 March, 2018 | </strong>Dokyu gets her first public exposure. But carefully does it! Not all the bolts are screwed tightly, yet."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px 0;background-color: #232324;
+      border-radius: 4px;
+      border-top: 10px solid #232324;
+      border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.0.0</h7><button class="btn btn-primary" title="<strong>20 April, 2018 | </strong>Reversing out of the garage, Dokyu does a stylish about-turn into the loving arms of After Effects."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.2.0</h7><button class="btn btn-primary" title="<strong>1 May, 2018 | </strong>Dokyu finds her voice with a live chatbot. If Dokyu starts creaking, you can leave a message for our team and we'll get back to you sharpish."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.5.0</h7><button class="btn btn-primary" title="<strong>30 July, 2018 | </strong>Dokyu gleams as she earns the badge of becoming a full-stack application! A server running concurrently allows Dokyu to make deliveries to users fast and quietly. Dokyu gets yet a new paint-job upgrade to look even more beautiful and user-friendly."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.6.0</h7><button class="btn btn-primary" title="<strong>20 August, 2018 | </strong>Dokyu's media library gets a big upgrade! The studio library now offers 30 flexible scenes and 30 unique transitions that combine to produce over 2 minutes of animated video. More to come soon..."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.6.5</h7><button class="btn btn-primary" title="<strong>25 October, 2018 | </strong>Dokyu was updated for CC2019 which introduced a new Javascript expression engine. Legacy expressions have been yoinked out and replaced with modern syntax."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.0 [beta]</h7><button class="btn btn-primary" title="<strong>10 March, 2019 | </strong>The Dokyu 2.0 era has arrived. New VFX template libraries produced at our studio will now be published in real-time through the extension."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.0</h7><button class="btn btn-primary" title="<strong>05 April, 2019 | </strong>Dokyu 2.0 launched with a new flagship library we call ‘typography’. It’s a bold and varied collection of text-driven sequences that can be rendered in 16:9, 9:16 and 1:1. Our studio is actively building more VFX libraries, so check back soon."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.5 [beta]</h7><button class="btn btn-primary" title="<strong>28 June, 2019 | </strong>15 motion libraries containing 1520 functional and flexible elements are published to Dokyu. We also set aside time to update to a lighter app framework to ensure we can continue publishing new content without app slow-down."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.5</h7><button class="btn btn-primary" title="<strong>14 July, 2019 | </strong>The 15 brand new libraries are now available for all Dokyu customers. Enjoy! (As Dokyu is a web app, you'll see the libraries in the panel but won't be able to use them until you update.)"><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="modal-terms">
+            <div class="terms" style="margin:0px 0 5px 0;">
+              <h7><a onclick="window.cep.util.openURLInDefaultBrowser('https://3dmybusiness.com/privacy/')"><u>Privacy Policy</u></a> & <a onclick="window.cep.util.openURLInDefaultBrowser('https://3dmybusiness.com/terms/')"><u>Terms</u></a></h7>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- MOTION DEPENDENCIES -->
+
+  <div class="presetOverlay presetColour"></div>
+  <div class="presetOverlay"></div>
+  <div class="scrollbar" id="style-3">
+    
+    <!--
+          <div class="container" style="margin: 0px -1px 1px -2px;padding: 4px 3px 0 5px;">
+            <div class="alert alert-link alert-dismissible fade show" role="alert">
+              <a class="alert-link">
+                <h7 style="color:#fff;opacity:.75;">Let's start simple with the Icons library</h7>
+              </a>
+
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true" style="padding-bottom:2px;"><i data-feather="x"></i></span>
+        </button>
+            </div>
+          </div>
+    -->
+
+
+      <!-- MOTION -->
+
+      <div id="fullpage">
+        <div class="section" id="section0">
+        
+          
+          <!-- LIBRARIES -->
+          
+            <!-- ICONS -->
+
+            <div class="slide" id="slide20">
+            <div class="scrollable-element">
+            <div class="gridMacro">
+            <div class="row">
+
+            <div class="col-12 col-sm-6 md-4">
+            <div class="col">
+            <div class="cardMotion">
+            <a data-menuanchor="firstPage"><a href="icons.html">
+                <img style="height:100%;width:100%;max-height:1080px;
+                        max-width:1920px;border-radius:8px;" src="img/UI_Back.svg" />
+              </a>
+            </div>
+            <div class="cardMetaBack">
+            <div class="row">
+              <div class="MetaCentre">Back</div>
+            </div>
+            </div>
+            </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 md-4">
+            <div class="col">
+            <div class="cardMotion" id="btnIcon078" onclick="addIcon078()">
+              
+              <!-- Beacon_002   -->
+              <div id="selectionBeaconMotion" style="z-index:500;">
+                <button class="tour004" style="background-color:transparent;border: 1px solid transparent;outline:0;">
+                      <div class="ring-container">
+                         <div class="ringring"></div>
+                         <div class="circle"></div>
+                       </div>
+                      </button>
+              </div>
+              
+            <a data-menuanchor="firstPage">
+              <img id="gifHover79" style="height:100%;width:100%;max-height:1080px;
+              max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_078.jpg" />
+
+            </a>
+            </div>
+            
+              <div class="cardMeta">
+            <div class="row">
+              
+              <div class="MetaCentre">RSS</div>
+            </div>
+          </div>
+            </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 md-4">
+            <div class="col">
+            <div class="cardMotion" id="btnIcon077" onclick="addIcon077()">
+            <a data-menuanchor="firstPage">
+              <img id="gifHover78" style="height:100%;width:100%;max-height:1080px;
+              max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_077.jpg" />
+
+            </a>
+            </div>
+            
+              <div class="cardMeta">
+            <div class="row">
+              
+              <div class="MetaCentre">Save</div>
+            </div>
+          </div>
+            </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 md-4">
+            <div class="col">
+            <div class="cardMotion" id="btnIcon076" onclick="addIcon076()">
+            <a data-menuanchor="firstPage">
+              <img id="gifHover77" style="height:100%;width:100%;max-height:1080px;
+              max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_076.jpg" />
+
+            </a>
+            </div>
+            
+              <div class="cardMeta">
+            <div class="row">
+              
+              <div class="MetaCentre">Scissors</div>
+            </div>
+          </div>
+            </div>
+            </div>
+
+            
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon075" onclick="addIcon075()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover76" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_075.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Search</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon074" onclick="addIcon074()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover75" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_074.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Send</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon073" onclick="addIcon073()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover74" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_073.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Server</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon072" onclick="addIcon072()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover73" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_072.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Settings</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon071" onclick="addIcon071()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover72" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_071.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Share 001</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon070" onclick="addIcon070()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover71" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_070.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Share 002</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon069" onclick="addIcon069()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover70" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_069.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Shield Off</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon068" onclick="addIcon068()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover69" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_068.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Shield</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon067" onclick="addIcon067()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover68" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_067.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Shopping Bag</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+                        
+                        <div class="col-sm-6">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon066" onclick="addIcon066()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover67" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_066.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Shopping Cart</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon065" onclick="addIcon065()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover66" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_065.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Shuffle</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon064" onclick="addIcon064()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover65" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_064.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Sidebar</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon063" onclick="addIcon063()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover64" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_063.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Skip Back</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon062" onclick="addIcon062()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover63" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_062.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Skip Forward</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon061" onclick="addIcon061()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover62" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_061.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Slack</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon060" onclick="addIcon060()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover61" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_060.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Slash</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon059" onclick="addIcon059()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover60" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_059.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Sliders</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon058" onclick="addIcon058()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover59" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_058.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Smartphone</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon057" onclick="addIcon057()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover58" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_057.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Smile</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon056" onclick="addIcon056()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover57" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_056.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Speaker</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon055" onclick="addIcon055()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover56" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_055.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Square</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon054" onclick="addIcon054()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover55" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_054.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Star</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon053" onclick="addIcon053()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover54" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_053.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Stop Circle</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon052" onclick="addIcon052()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover53" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_052.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Sun</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon051" onclick="addIcon051()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover52" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_051.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Sunrise</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon050" onclick="addIcon050()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover51" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_050.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Sunset</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon049" onclick="addIcon049()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover50" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_049.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Tablet</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon048" onclick="addIcon048()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover49" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_048.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Tag</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon047" onclick="addIcon047()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover48" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_047.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Target</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon046" onclick="addIcon046()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover47" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_046.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Terminal</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon045" onclick="addIcon045()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover46" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_045.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Thermometer</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon044" onclick="addIcon044()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover45" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_044.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Thumbs Down</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon043" onclick="addIcon043()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover44" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_043.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Thumbs Up</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon042" onclick="addIcon042()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover43" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_042.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Toggle Left</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon041" onclick="addIcon041()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover42" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_041.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Toggle Right</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon040" onclick="addIcon040()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover41" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_040.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Trash 001</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon039" onclick="addIcon039()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover40" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_039.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Trash 002</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon038" onclick="addIcon038()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover39" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_038.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Trello</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon037" onclick="addIcon037()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover38" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_037.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Trending Down</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+                        
+                        <div class="col-sm-6">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon036" onclick="addIcon036()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover37" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_036.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Trending Up</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon035" onclick="addIcon035()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover36" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_035.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Triangle</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon034" onclick="addIcon034()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover35" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_034.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Truck</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon033" onclick="addIcon033()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover34" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_033.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">TV</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon032" onclick="addIcon032()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover33" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_032.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Twitter</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon031" onclick="addIcon031()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover32" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_031.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Type</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon030" onclick="addIcon030()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover31" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_030.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Umbrella</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon029" onclick="addIcon029()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover30" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_029.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Underline</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon028" onclick="addIcon028()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover29" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_028.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Unlock</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon027" onclick="addIcon027()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover28" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_027.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Upload Cloud</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon026" onclick="addIcon026()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover27" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_026.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Upload</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon025" onclick="addIcon025()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover26" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_025.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">User Check</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon024" onclick="addIcon024()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover25" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_024.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">User Minus</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon023" onclick="addIcon023()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover24" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_023.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">User Plus</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon022" onclick="addIcon022()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover23" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_022.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">User X</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon021" onclick="addIcon021()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover22" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_021.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">User</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon020" onclick="addIcon020()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover21" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_020.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Users</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon019" onclick="addIcon019()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover20" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_019.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Video Off</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon018" onclick="addIcon018()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover19" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_018.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Video</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon017" onclick="addIcon017()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover18" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_017.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Voicemail</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon016" onclick="addIcon016()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover17" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_016.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Volume 001</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon015" onclick="addIcon015()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover16" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_015.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Volume 002</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon014" onclick="addIcon014()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover15" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_014.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Volume X</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon013" onclick="addIcon013()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover14" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_013.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Volume</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon012" onclick="addIcon012()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover13" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_012.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Watch</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon011" onclick="addIcon011()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover12" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_011.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Wifi Off</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon010" onclick="addIcon010()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover11" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_010.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Wifi</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon009" onclick="addIcon009()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover10" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_009.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Wind</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+                        
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon008" onclick="addIcon008()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover09" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_008.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">X Circle</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon007" onclick="addIcon007()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover08" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_007.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">X Octagon</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon006" onclick="addIcon006()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover07" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_006.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">X Square</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon005" onclick="addIcon005()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover06" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_005.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">X</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon004" onclick="addIcon004()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover05" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_004.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">YouTube</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon003" onclick="addIcon003()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover04" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_003.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Zap Off</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon002" onclick="addIcon002()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover03" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_002.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Zap</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon001" onclick="addIcon001()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover02" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_001.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Zoom In</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 md-4">
+                        <div class="col">
+                        <div class="cardMotion" id="btnIcon000" onclick="addIcon000()">
+                        <a data-menuanchor="firstPage">
+                          <img id="gifHover01" style="height:100%;width:100%;max-height:1080px;
+                          max-width:1920px;border-radius:8px 8px 0 0;" src="icons/icon_000.jpg" />
+
+                        </a>
+                        </div>
+                        
+                          <div class="cardMeta">
+                        <div class="row">
+                          
+                          <div class="MetaCentre">Zoom Out</div>
+                        </div>
+                      </div>
+                        </div>
+                        </div>
+                        
+                        
+                        
+
+            </div>
+            </div>
+            </div>
+            </div>
+       
+
+            
+        <!-- MOTION -->
+        </div>
+        </div>
+        
+       <!-- MOTION DEPENDENCIES -->
+         </div>
+
+         <!-- FOOTER -->  
+         
+         <footer class="footer-distributed" style="left: 0px;">
+           <div class="container">
+             <div class="row">
+               <div class="row justify-content-start bottomLeftNav">
+                 <div class="footer-brands">
+                   <a span class="pixabay" onclick="window.cep.util.openURLInDefaultBrowser('https://pixabay.com')"><img id="pixabay_logo" style="margin-bottom:-2px;width: 47px;opacity: .6;" src="img/pixabay.png"</img></span></a>
+                 </div>
+                 <div class="footer-brands-2">
+                   <button class="btn btn-dark-right-centre" data-toggle="modal" data-target="#myModal"><img id="dokyu_logo" style="margin-bottom: 10px;" src="img/dokyu_footer.png" width="12"</img><span class="beta"></span></button>
+                 </div>
+               </div>
+               <!--
+               <div class="footer-brands-2">
+                 <button class="btn btn-dark-right-centre" data-toggle="modal" data-target="#myModal"><img id="dokyu_logo" style="margin-bottom: 10px;" src="img/dokyu_footer.png" width="12"</img><span class="beta"></span></button>
+               </div>
+             </div>
+             -->
+               <!--
+               <div class="col-md-2.5 ml-md-auto bottomRightButtons">
+                 <div class="footer-notification">
+                   <a button href="tour_a_000a_icons[a].html" style="position:fixed;right:104px;" class="btn btn-dark-notification" title="Dokyu Tour 001 Icons & SFX"><i data-feather="flag" style="width:15px;height:15px;color:#fff;margin-right:0px;"></i></button></a>
+                 </div>
+               </div>
+               <div class="col-md-2.5 ml-md-auto bottomRightButtons">
+                 <div class="footer-notification">
+                   <a button href="tour_b_000a_media[b].html" style="position:fixed;right:57px;" class="btn btn-dark-notification" title="Dokyu Tour 002 Media"><i data-feather="flag" style="width:15px;height:15px;color:#fff;margin-right:0px;"></i></button></a>
+                 </div>
+               </div>
+               <div class="col-md-2.5 ml-md-auto bottomRightButtons">
+                 <div class="footer-notification">
+                   <a button href="tour_c_000a_masks[c].html" style="position:fixed;right:10px;" class="btn btn-dark-notification" title="Dokyu Tour 003 Mask Transitions"><i data-feather="flag" style="width:15px;height:15px;color:#fff;margin-right:0px;"></i></button></a>
+                 </div>
+               </div>
+               -->
+             </div>
+           </div>
+         </footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/popper.js@1"></script>
+        <script src="https://unpkg.com/tippy.js@4"></script>
+        <script src="js/tippyTourA.js"></script>
+        <!-- IMPORT PAGE-SPECIFIC DEPENDENCIES -->
+        <script src="js/import/icons_003.js"></script>
+        <!-- GIF PAGE-SPECFIIC DEPENDENCIES -->
+        <script src="js/gif/icons_003.js"></script>
+        <!-- MP3 PAGE-SPECFIIC DEPENDENCIES -->
+        <script src="js/main.js"></script>        
+        <script>
+          feather.replace()
+        </script>
+                
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123173343-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+
+          gtag('config', 'UA-123173343-1');
+        </script>
+      </body>
+
+</html>

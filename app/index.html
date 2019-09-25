@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<meta name="robots" content="noindex">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123173343-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-123173343-1');
+</script>
+  <!--<script src="js/CSInterface.js"></script>-->
+  <script src="js/feather.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/jquery.fullpage.css">
+  <link rel="stylesheet" href="css/tippy.css">
+
+<style media="screen">
+.logoBottomVersion {
+    bottom: 9.7pc;
+    position: absolute;
+    z-index: 0;
+    margin-bottom: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: blinker 5s linear infinite;
+}
+
+.logoDokyu {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-animation: fadein 2s;
+    animation: fadein 2s;
+}
+
+
+h8 {
+  font-weight: 600;
+  color: #dedede;
+}
+
+
+.btn-launchDokyu {
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  background-color: #b53535;
+  border-radius: 5px;
+  border: 0;
+  line-height: 3.00;
+  letter-spacing: 1.5px;
+  border-radius: 4px;
+  display: block;
+  box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+   -webkit-box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+}
+
+.btn-launchDokyu:hover {
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  background-color: #a82e2e;
+  border-radius: 5px;
+  border: 0;
+  line-height: 3.00;
+  letter-spacing: 1.5px;
+  border-radius: 4px;
+  display: block
+}
+
+.btn-launchDokyu:focus {
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  background-color: #a82e2e;
+  border-radius: 5px;
+  border: 0;
+  line-height: 3.00;
+  letter-spacing: 1.5px;
+  border-radius: 4px;
+  display: block
+}
+
+.btn-dokyuFree {
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  background-color: #303030;
+  border-radius: 5px;
+  border: 0;
+  line-height: 3.00;
+  letter-spacing: 1.5px;
+  border-radius: 4px;
+  display: block;
+  box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+   -webkit-box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+}
+
+.btn-dokyuFree:hover {
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  background-color: #292929;
+  border-radius: 5px;
+  border: 0;
+  line-height: 3.00;
+  letter-spacing: 1.5px;
+  border-radius: 4px;
+  display: block
+}
+
+.btn-dokyuFree:focus {
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  background-color: #292929;
+  border-radius: 5px;
+  border: 0;
+  line-height: 3.00;
+  letter-spacing: 1.5px;
+  border-radius: 4px;
+  display: block
+}
+
+.enterDokyuFree {
+  margin-top: 25px;
+  font-size: 21px;
+  text-align: center;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-animation: fadein 2s;
+  animation: fadein 2s
+}
+
+.welcomeTitle {
+
+}
+
+.welcomeTitle span {
+color: #fff;
+font-size: 12px;
+background-color: #a82e2e;
+border-radius: 5px;
+padding: 5px 10px;
+vertical-align: 15%;
+margin-left: 10px;
+letter-spacing: 1px;
+}
+
+
+.bottomBorder {
+  background-color: #ebebeb;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: calc(100% - 400px);
+  width: calc(100% - 40px);
+  background-color: #181818;
+  color: white;
+  border-radius: 10px;
+  margin: 20px;
+  text-align: center;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -50px;
+}
+
+
+#footer p {
+		margin:0;
+		padding:10px;
+    position:fixed;bottom:0;left:0;right:0;height:30px;
+    background-color: #ebebeb;
+    max-width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px 5px 0 0;
+    height: 30px;
+	}
+
+  #container {
+  min-height:100%;
+  position:relative;
+}
+
+</style>
+
+
+</head>
+
+<body>
+  <div class="loadIn" id="animate" style="transition:transform 300ms cubic-bezier(0.7, 0, 0.05, 1) 670ms, opacity 300ms cubic-bezier(0.7, 0, 0.05, 1) 670ms; transform: translateY(0px); opacity: 1;">
+    <div class="logoDokyu">
+      <img class="logoTop" src="img/dokyu_shadow.svg" alt="Dokyu">
+      <img class="logoBottomVersion" src="img/dokyu_shadow_blink.svg" alt="Dokyu">
+    </div>
+
+    <div class="welcomeTitle" style="margin-top: 38px;">
+      <b>Dokyu</b><span>2.0.5</span>
+    </div>
+
+    <div class="enterDokyu">
+      <div class="enterBorder">
+        <a href="https://demo.3dmybusiness.com/tour_000.html" class="btn btn-launchDokyu"  style="margin: 0 25px;">
+          <h8>LAUNCH DEMO</h8>
+        </a>
+      </div>
+    </div>
+    </div>
+
+</body>
+<!--
+<div id="container">
+    <div id="footer">
+        <p></p>
+      </div>
+      </div>
+-->
+    <script>
+      feather.replace()
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+
+</html>

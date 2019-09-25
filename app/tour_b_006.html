@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="robots" content="noindex">
+  <script src="js/CSInterface.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/tippyTour.css">
+  <style media="screen">.dropdown-menu{min-width:50px;max-width:128px;margin:69px 10px 10px -88px}.bootstrap-select .dropdown-toggle .filter-option{top:2px}::-webkit-scrollbar{display:none}.scrollable-element{height:100%;width:100%;overflow-y:auto;color:#fff;padding-right:10px;overflow-x:hidden}.scrollbar{height:calc(100% - 117px)!important;width:100%;padding:5px 5px 5px 6px;overflow-y:scroll;background-color:transparent;position:absolute;overflow-x:hidden}</style>
+</head>
+
+<!-- NAVBAR -->
+
+<body onload="insertLicense();">
+
+  <nav class="navbar navbar-dark bg-dark navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col topLeftNav">
+          <div class="form-group" style="margin-left: 7px;">
+            <div class="icon-addon addon-lg">
+              <form id="search">
+                <input class="form-control1" data-live-search="true" type="text" placeholder="Search..." style="font-weight:300;" />
+                <div class="search-bar-button" type="text">
+                  <i data-feather="search"></i>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+          <select id="selection" class="selectpicker hide-tick" onchange="location = this.options[this.selectedIndex].value;">
+            <option value="https://demo.3dmybusiness.com/motion.html">Motion</option>
+            <option value="https://demo.3dmybusiness.com/media.html" selected>Media</option>
+          </select>
+          <!-- Beacon_002   -->
+          <div id="selectionBeaconMotion" style="z-index:1000;">
+            <button class="tour006" style="background-color:transparent;border: 1px solid transparent;outline:0;">
+                  <div class="ring-container">
+                     <div class="ringring"></div>
+                     <div class="circle"></div>
+                   </div>
+                  </button>
+          </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- MODAL -->
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <p></p>
+          <button class="btn btn-primary-exit" data-dismiss="modal"><i data-feather="x" style="width:15px;height:15px;"></i></button>
+        </div>
+        <div class="modal-body">
+
+
+          <div class="pricing">
+            <h1>Update Log</h1>
+          </div>
+
+          <div class="modal-check">
+            <div class="container">
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v0.5.0 [beta]</h7><button class="btn btn-primary" title="<strong>9 March, 2018 | </strong>Dokyu gets her first public exposure. But carefully does it! Not all the bolts are screwed tightly, yet."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px 0;background-color: #232324;
+      border-radius: 4px;
+      border-top: 10px solid #232324;
+      border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.0.0</h7><button class="btn btn-primary" title="<strong>20 April, 2018 | </strong>Reversing out of the garage, Dokyu does a stylish about-turn into the loving arms of After Effects."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.2.0</h7><button class="btn btn-primary" title="<strong>1 May, 2018 | </strong>Dokyu finds her voice with a live chatbot. If Dokyu starts creaking, you can leave a message for our team and we'll get back to you sharpish."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.5.0</h7><button class="btn btn-primary" title="<strong>30 July, 2018 | </strong>Dokyu gleams as she earns the badge of becoming a full-stack application! A server running concurrently allows Dokyu to make deliveries to users fast and quietly. Dokyu gets yet a new paint-job upgrade to look even more beautiful and user-friendly."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.6.0</h7><button class="btn btn-primary" title="<strong>20 August, 2018 | </strong>Dokyu's media library gets a big upgrade! The studio library now offers 30 flexible scenes and 30 unique transitions that combine to produce over 2 minutes of animated video. More to come soon..."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.6.5</h7><button class="btn btn-primary" title="<strong>25 October, 2018 | </strong>Dokyu was updated for CC2019 which introduced a new Javascript expression engine. Legacy expressions have been yoinked out and replaced with modern syntax."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.0 [beta]</h7><button class="btn btn-primary" title="<strong>10 March, 2019 | </strong>The Dokyu 2.0 era has arrived. New VFX template libraries produced at our studio will now be published in real-time through the extension."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.0</h7><button class="btn btn-primary" title="<strong>05 April, 2019 | </strong>Dokyu 2.0 launched with a new flagship library we call ‘typography’. It’s a bold and varied collection of text-driven sequences that can be rendered in 16:9, 9:16 and 1:1. Our studio is actively building more VFX libraries, so check back soon."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.5 [beta]</h7><button class="btn btn-primary" title="<strong>28 June, 2019 | </strong>15 motion libraries containing 1520 functional and flexible elements are published to Dokyu. We also set aside time to update to a lighter app framework to ensure we can continue publishing new content without app slow-down."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.5</h7><button class="btn btn-primary" title="<strong>14 July, 2019 | </strong>The 15 brand new libraries are now available for all Dokyu customers. Enjoy! (As Dokyu is a web app, you'll see the libraries in the panel but won't be able to use them until you update.)"><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="modal-terms">
+            <div class="terms" style="margin:0px 0 5px 0;">
+              <h7><a onclick="window.cep.util.openURLInDefaultBrowser('https://3dmybusiness.com/privacy/')"><u>Privacy Policy</u></a> & <a onclick="window.cep.util.openURLInDefaultBrowser('https://3dmybusiness.com/terms/')"><u>Terms</u></a></h7>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+
+  <div id="option1" class="group">
+
+
+    <!-- Beacon_001
+    <div id="selectionBeaconMedia">
+      <button class="btn" style="background-color:transparent;" title="Discover the best source for free images inside After Effects. Free for commercial use. No attribution required. Dokyu Media is built natively into <strong>Dokyu Photo Animation Maker</strong> and is a free download.">
+
+    <div class="ring-container">
+       <div class="ringring"></div>
+       <div class="circle"></div>
+     </div>
+    </button>
+    </div>
+ -->
+
+    <div class="scrollbar" id="style-3">
+      <div class="style fade-in-media">
+
+        <body class="hostElt" oncontextmenu="return false;">
+          <section class="window">
+            <main class="real">
+              <div class="header" hidden>
+                <div class="search">
+                  <button class="configuration-trigger hostElt drkBorder"></button>
+                  <form id="search">
+                    <label>
+            <input type="text" name="search" class="drkBorder" placeholder="Search" maxlength="100">
+          </label>
+                  </form>
+                </div>
+              </div>
+              <div class="configuration hostBgdLight drkBorder">
+                <div template=".configuration form" class="line">
+                  <div class="name"></div>
+                  <div class="value">
+                  </div>
+                </div>
+                <form id="configuration"></form>
+              </div>
+              <div class="info hostBgdLight">
+                <div class="search-result active">
+                  <div template=".info .search-result .flex-images" class="item active hostBorder">
+                    <img src="img/background/blank.gif" draggable="false">
+                  </div>
+                  <div template-default=".info .search-result .flex-images">
+                    <div class="left" data-h="0"></div>
+                    <div class="right" data-h="0"></div>
+                  </div>
+                  <div class="flex-images">
+                  </div>
+                </div>
+                <div class="disk">
+                  <div template=".info .disk .flex-images" class="item active hostBorder">
+                    <img src="img/background/blank.gif" draggable="false">
+                  </div>
+                  <div template-default=".info .disk .flex-images">
+                    <div class="left" data-h="0"></div>
+                    <div class="right" data-h="0"></div>
+                  </div>
+                  <div class="flex-images">
+                  </div>
+                </div>
+              </div>
+              <div class="download hostBgdDark">
+                <div class="downloadable">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col">
+                        <div class="hostBgdLight">
+                          <div class="profile">
+                            <img draggable="false">
+                            <div class="text">
+                              <div class="photoby">
+                                <h5>Author</h5></div>
+                              <div class="name"></div>
+                              <div class="interactions"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr class="style1">
+                        <form id="download">
+                          <button type="submit" class="hostFont"><h6 style="margin: 2px 12px 15px 0px;"><i data-feather="download-cloud" style="width:15px;height:15px;margin: 8px 10px -2px 0px;"></i>Download</h6></button>
+                          <input name="url" value="" type="hidden">
+                          <input name="id" value="" type="hidden">
+                          <select name="size" class="mini" hidden>
+                  <option value="" selected>Original</option>
+                  </select>
+                          <select name="mode" hidden>
+                  <option value="file">Open as a new file</option>
+                </select>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="config">
+                  <div class="option active" data-t=".info .search-result"></div>
+                  <div class="option" data-t=".info .disk"></div>
+                </div>
+                <div class="footer-border hostBgd"></div>
+            </main>
+            <div class="loading"><img width="150" height="150" src="img/loading.gif" draggable="false"></div>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->  
+  
+  <footer class="footer-distributed" style="left: 0px;">
+    <div class="container">
+      <div class="row">
+        <div class="row justify-content-start bottomLeftNav">
+          <div class="footer-brands">
+            <a span class="pixabay" onclick="window.cep.util.openURLInDefaultBrowser('https://pixabay.com')"><img id="pixabay_logo" style="margin-bottom:-2px;width: 47px;opacity: .6;" src="img/pixabay.png"</img></span></a>
+          </div>
+          <div class="footer-brands-2">
+            <button class="btn btn-dark-right-centre" data-toggle="modal" data-target="#myModal"><img id="dokyu_logo" style="margin-bottom: 10px;margin-bottom: 3px;" src="img/dokyu_footer.png" width="12"</img><span class="beta"></span></button>
+          </div>
+        </div>
+        <!--
+        <div class="footer-brands-2">
+          <button class="btn btn-dark-right-centre" data-toggle="modal" data-target="#myModal"><img id="dokyu_logo" style="margin-bottom: 10px;margin-bottom: 3px;" src="img/dokyu_footer.png" width="12"</img><span class="beta"></span></button>
+        </div>
+      </div>
+      -->
+        <!--
+        <div class="col-md-2.5 ml-md-auto bottomRightButtons">
+          <div class="footer-notification">
+            <a button href="tour_a_000a_icons[a].html" style="position:fixed;right:104px;" class="btn btn-dark-notification" title="Dokyu Tour 001 Icons & SFX"><i data-feather="flag" style="width:15px;height:15px;color:#fff;margin-right:0px;"></i></button></a>
+          </div>
+        </div>
+        <div class="col-md-2.5 ml-md-auto bottomRightButtons">
+          <div class="footer-notification">
+            <a button href="tour_b_000a_media[b].html" style="position:fixed;right:57px;" class="btn btn-dark-notification" title="Dokyu Tour 002 Media"><i data-feather="flag" style="width:15px;height:15px;color:#fff;margin-right:0px;"></i></button></a>
+          </div>
+        </div>
+        <div class="col-md-2.5 ml-md-auto bottomRightButtons">
+          <div class="footer-notification">
+            <a button href="tour_c_000a_masks[c].html" style="position:fixed;right:10px;" class="btn btn-dark-notification" title="Dokyu Tour 003 Mask Transitions"><i data-feather="flag" style="width:15px;height:15px;color:#fff;margin-right:0px;"></i></button></a>
+          </div>
+        </div>
+        -->
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.3/js/bootstrap-select.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="js/Pixa/PixaCache.js"></script>
+  <script src="js/Pixa/PixaHelper.js"></script>
+  <script src="js/Pixa/PixaAPI.js"></script>
+  <script src="js/Pixa/PixaFiles.js"></script>
+  <script src="js/Bay/BayTemplate.js"></script>
+  <script src="js/Bay/BayStorage.js"></script>
+  <script src="js/Bay/BayLoading.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/pixabay.js"></script>
+  <script src="https://unpkg.com/popper.js@1"></script>
+  <script src="https://unpkg.com/tippy.js@4"></script>
+  <script src="js/tippyTourB.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    feather.replace()
+  </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123173343-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-123173343-1');
+  </script>
+  </body>
+
+</html>

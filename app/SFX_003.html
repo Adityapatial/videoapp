@@ -1,0 +1,2209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="robots" content="noindex">
+  <!--<script src="js/CSInterface.js"></script>-->
+  <script src="js/feather.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/tippy.css">
+  <style media="screen">.dropdown-menu {min-width: 50px;max-width: 128px;margin: 43px 10px 10px -98px;}.container {max-width: 100%;}</style>
+</head>
+
+<!-- NAVBAR -->
+
+<body>
+  <nav class="navbar navbar-dark bg-dark navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col topLeftNav">
+          <div class="form-group" style="margin-left: 7px;">
+              <form id="search">
+                <input class="form-control1" data-live-search="true" type="text" placeholder="Search..." style="font-weight:300;visibility: hidden;" />
+                <div class="search-bar-button" type="text">
+                  <i data-feather="search"></i>
+                </div>
+              </form>
+          </div>
+        </div>
+          <select id="selection" class="selectpicker hide-tick" onchange="location = this.options[this.selectedIndex].value;" style="margin:-3px 10px 0px 0px;padding-top: 1px;">
+            <option value="https://demo.3dmybusiness.com/motion.html" selected>Motion</option>
+            <option value="https://demo.3dmybusiness.com/media.html">Media</option>
+          </select>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- MODAL -->
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <p></p>
+          <button class="btn btn-primary-exit" data-dismiss="modal"><i data-feather="x" style="width:15px;height:15px;"></i></button>
+        </div>
+        <div class="modal-body">
+
+
+          <div class="pricing">
+            <h1>Update Log</h1>
+          </div>
+
+          <div class="modal-check">
+            <div class="container">
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v0.5.0 [beta]</h7><button class="btn btn-primary" title="<strong>9 March, 2018 | </strong>Dokyu gets her first public exposure. But carefully does it! Not all the bolts are screwed tightly, yet."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px 0;background-color: #232324;
+      border-radius: 4px;
+      border-top: 10px solid #232324;
+      border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.0.0</h7><button class="btn btn-primary" title="<strong>20 April, 2018 | </strong>Reversing out of the garage, Dokyu does a stylish about-turn into the loving arms of After Effects."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.2.0</h7><button class="btn btn-primary" title="<strong>1 May, 2018 | </strong>Dokyu finds her voice with a live chatbot. If Dokyu starts creaking, you can leave a message for our team and we'll get back to you sharpish."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.5.0</h7><button class="btn btn-primary" title="<strong>30 July, 2018 | </strong>Dokyu gleams as she earns the badge of becoming a full-stack application! A server running concurrently allows Dokyu to make deliveries to users fast and quietly. Dokyu gets yet a new paint-job upgrade to look even more beautiful and user-friendly."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.6.0</h7><button class="btn btn-primary" title="<strong>20 August, 2018 | </strong>Dokyu's media library gets a big upgrade! The studio library now offers 30 flexible scenes and 30 unique transitions that combine to produce over 2 minutes of animated video. More to come soon..."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.6.5</h7><button class="btn btn-primary" title="<strong>25 October, 2018 | </strong>Dokyu was updated for CC2019 which introduced a new Javascript expression engine. Legacy expressions have been yoinked out and replaced with modern syntax."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.0 [beta]</h7><button class="btn btn-primary" title="<strong>10 March, 2019 | </strong>The Dokyu 2.0 era has arrived. New VFX template libraries produced at our studio will now be published in real-time through the extension."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.0</h7><button class="btn btn-primary" title="<strong>05 April, 2019 | </strong>Dokyu 2.0 launched with a new flagship library we call ‘typography’. It’s a bold and varied collection of text-driven sequences that can be rendered in 16:9, 9:16 and 1:1. Our studio is actively building more VFX libraries, so check back soon."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.5 [beta]</h7><button class="btn btn-primary" title="<strong>28 June, 2019 | </strong>15 motion libraries containing 1520 functional and flexible elements are published to Dokyu. We also set aside time to update to a lighter app framework to ensure we can continue publishing new content without app slow-down."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.5</h7><button class="btn btn-primary" title="<strong>14 July, 2019 | </strong>The 15 brand new libraries are now available for all Dokyu customers. Enjoy! (As Dokyu is a web app, you'll see the libraries in the panel but won't be able to use them until you update.)"><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="modal-terms">
+            <div class="terms" style="margin:0px 0 5px 0;">
+              <h7><a onclick="window.cep.util.openURLInDefaultBrowser('https://3dmybusiness.com/privacy/')"><u>Privacy Policy</u></a> & <a onclick="window.cep.util.openURLInDefaultBrowser('https://3dmybusiness.com/terms/')"><u>Terms</u></a></h7>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- MOTION DEPENDENCIES -->
+
+  <div class="presetOverlay presetColour"></div>
+  <div class="presetOverlay"></div>
+  <div class="scrollbar" id="style-3">
+
+
+      <!-- MOTION -->
+
+      <div id="fullpage">
+        <div class="section" id="section0">
+        
+          
+          <!-- LIBRARIES -->
+          
+          <!-- SFX -->
+
+          <div class="slide" id="slide19">
+          <div class="scrollable-element">
+          <div class="gridMacro">
+          <div class="row">
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion">
+          <a data-menuanchor="firstPage"><a href="SFX.html">
+            <img style="height:100%;width:100%;max-height:1080px;
+                    max-width:1920px;border-radius:8px;" src="img/UI_Back.svg" />
+          </a>
+          </div>
+          <div class="cardMetaBack">
+          <div class="row">
+          <div class="MetaCentre">Back</div>
+          </div>
+          </div>
+          </div>
+          </div>
+          
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX157" id="addSFX157">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3001();">
+          <img id="gifHover01" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_157.jpg" />
+          <audio id="mp3157"> 
+          <source src="SFX/Impact_001_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 001</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX158" id="addSFX158">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3002();">
+          <img id="gifHover02" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_158.jpg" />
+          <audio id="mp3158"> 
+          <source src="SFX/Impact_002_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 002</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX159" id="addSFX159">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3003();">
+          <img id="gifHover03" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_159.jpg" />
+          <audio id="mp3159"> 
+          <source src="SFX/Impact_003_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 003</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX160" id="addSFX160">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3004();">
+          <img id="gifHover04" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_160.jpg" />
+          <audio id="mp3160"> 
+          <source src="SFX/Impact_004_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 004</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX161" id="addSFX161">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3005();">
+          <img id="gifHover05" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_161.jpg" />
+          <audio id="mp3161"> 
+          <source src="SFX/Impact_005_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 005</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX162" id="addSFX162">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3006();">
+          <img id="gifHover06" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_162.jpg" />
+          <audio id="mp3162"> 
+          <source src="SFX/Impact_006_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 006</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX163" id="addSFX163">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3007();">
+          <img id="gifHover07" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_163.jpg" />
+          <audio id="mp3163"> 
+          <source src="SFX/Impact_007_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 007</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX164" id="addSFX164">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3008();">
+          <img id="gifHover08" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_164.jpg" />
+          <audio id="mp3164"> 
+          <source src="SFX/Impact_008_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 008</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX165" id="addSFX165">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3009();">
+          <img id="gifHover09" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_165.jpg" />
+          <audio id="mp3165"> 
+          <source src="SFX/Impact_009_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 009</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX166" id="addSFX166">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3010();">
+          <img id="gifHover10" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_166.jpg" />
+          <audio id="mp3166"> 
+          <source src="SFX/Impact_010_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 010</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX167" id="addSFX167">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3011();">
+          <img id="gifHover11" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_167.jpg" />
+          <audio id="mp3167"> 
+          <source src="SFX/Impact_011_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 011</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX168" id="addSFX168">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3012();">
+          <img id="gifHover12" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_168.jpg" />
+          <audio id="mp3168"> 
+          <source src="SFX/Impact_012_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 012</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX169" id="addSFX169">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3013();">
+          <img id="gifHover13" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_169.jpg" />
+          <audio id="mp3169"> 
+          <source src="SFX/Impact_013_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 013</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX170" id="addSFX170">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3014();">
+          <img id="gifHover14" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_170.jpg" />
+          <audio id="mp3170"> 
+          <source src="SFX/Impact_014_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 014</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX171" id="addSFX171">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3015();">
+          <img id="gifHover15" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_171.jpg" />
+          <audio id="mp3171"> 
+          <source src="SFX/Impact_015_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 015</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX172" id="addSFX172">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3016();">
+          <img id="gifHover16" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_172.jpg" />
+          <audio id="mp3172"> 
+          <source src="SFX/Impact_016_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 016</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX173" id="addSFX173">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3017();">
+          <img id="gifHover17" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_173.jpg" />
+          <audio id="mp3173"> 
+          <source src="SFX/Impact_017_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 017</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX174" id="addSFX174">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3018();">
+          <img id="gifHover18" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_174.jpg" />
+          <audio id="mp3174"> 
+          <source src="SFX/Impact_018_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 018</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX175" id="addSFX175">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3019();">
+          <img id="gifHover19" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_175.jpg" />
+          <audio id="mp3175"> 
+          <source src="SFX/Impact_019_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 019</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX176" id="addSFX176">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3020();">
+          <img id="gifHover20" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_176.jpg" />
+          <audio id="mp3176"> 
+          <source src="SFX/Impact_020_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 020</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX177" id="addSFX177">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3021();">
+          <img id="gifHover21" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_177.jpg" />
+          <audio id="mp3177"> 
+          <source src="SFX/Impact_021_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 021</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX178" id="addSFX178">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3022();">
+          <img id="gifHover22" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_178.jpg" />
+          <audio id="mp3178"> 
+          <source src="SFX/Impact_022_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 022</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX179" id="addSFX179">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3023();">
+          <img id="gifHover23" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_179.jpg" />
+          <audio id="mp3179"> 
+          <source src="SFX/Impact_023_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 023</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX180" id="addSFX180">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3024();">
+          <img id="gifHover24" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_180.jpg" />
+          <audio id="mp3180"> 
+          <source src="SFX/Impact_024_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 024</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-sm-6">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX181" id="addSFX181">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3025();">
+          <img id="gifHover25" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_181.jpg" />
+          <audio id="mp3181"> 
+          <source src="SFX/Impact_025_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 025</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX182" id="addSFX182">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3026();">
+          <img id="gifHover26" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_182.jpg" />
+          <audio id="mp3182"> 
+          <source src="SFX/Impact_026_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 026</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX183" id="addSFX183">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3027();">
+          <img id="gifHover27" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_183.jpg" />
+          <audio id="mp3183"> 
+          <source src="SFX/Impact_027_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 027</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX184" id="addSFX184">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3028();">
+          <img id="gifHover28" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_184.jpg" />
+          <audio id="mp3184"> 
+          <source src="SFX/Impact_028_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 028</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX185" id="addSFX185">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3029();">
+          <img id="gifHover29" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_185.jpg" />
+          <audio id="mp3185"> 
+          <source src="SFX/Impact_029_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 029</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX186" id="addSFX186">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3030();">
+          <img id="gifHover30" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_186.jpg" />
+          <audio id="mp3186"> 
+          <source src="SFX/Impact_030_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 030</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX187" id="addSFX187">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3031();">
+          <img id="gifHover31" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_187.jpg" />
+          <audio id="mp3187"> 
+          <source src="SFX/Impact_031_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 031</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX188" id="addSFX188">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3032();">
+          <img id="gifHover32" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_188.jpg" />
+          <audio id="mp3188"> 
+          <source src="SFX/Impact_032_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 032</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX189" id="addSFX189">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3033();">
+          <img id="gifHover33" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_189.jpg" />
+          <audio id="mp3189"> 
+          <source src="SFX/Impact_033_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 033</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX190" id="addSFX190">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3034();">
+          <img id="gifHover34" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_190.jpg" />
+          <audio id="mp3190"> 
+          <source src="SFX/Impact_034_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 034</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX191" id="addSFX191">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3035();">
+          <img id="gifHover35" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_191.jpg" />
+          <audio id="mp3191"> 
+          <source src="SFX/Impact_035_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 035</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX192" id="addSFX192">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3036();">
+          <img id="gifHover36" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_192.jpg" />
+          <audio id="mp3192"> 
+          <source src="SFX/Impact_036_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 036</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX193" id="addSFX193">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3037();">
+          <img id="gifHover37" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_193.jpg" />
+          <audio id="mp3193"> 
+          <source src="SFX/Impact_037_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 037</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX194" id="addSFX194">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3038();">
+          <img id="gifHover38" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_194.jpg" />
+          <audio id="mp3194"> 
+          <source src="SFX/Impact_038_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 038</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX195" id="addSFX195">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3039();">
+          <img id="gifHover39" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_195.jpg" />
+          <audio id="mp3195"> 
+          <source src="SFX/Impact_039_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 039</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX196" id="addSFX196">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3040();">
+          <img id="gifHover40" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_196.jpg" />
+          <audio id="mp3196"> 
+          <source src="SFX/Impact_040_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 040</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX197" id="addSFX197">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3041();">
+          <img id="gifHover41" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_197.jpg" />
+          <audio id="mp3197"> 
+          <source src="SFX/Impact_041_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 041</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX198" id="addSFX198">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3042();">
+          <img id="gifHover42" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_198.jpg" />
+          <audio id="mp3198"> 
+          <source src="SFX/Impact_042_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 042</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX199" id="addSFX199">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3043();">
+          <img id="gifHover43" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_199.jpg" />
+          <audio id="mp3199"> 
+          <source src="SFX/Impact_043_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 043</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX200" id="addSFX200">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3044();">
+          <img id="gifHover44" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_200.jpg" />
+          <audio id="mp3200"> 
+          <source src="SFX/Impact_044_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 044</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX201" id="addSFX201">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3045();">
+          <img id="gifHover45" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_201.jpg" />
+          <audio id="mp3201"> 
+          <source src="SFX/Impact_045_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 045</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX202" id="addSFX202">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3046();">
+          <img id="gifHover46" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_202.jpg" />
+          <audio id="mp3202"> 
+          <source src="SFX/Impact_046_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 046</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX203" id="addSFX203">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3047();">
+          <img id="gifHover47" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_203.jpg" />
+          <audio id="mp3203"> 
+          <source src="SFX/Impact_047_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 047</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX204" id="addSFX204">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3048();">
+          <img id="gifHover48" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_204.jpg" />
+          <audio id="mp3204"> 
+          <source src="SFX/Impact_048_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 048</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX205" id="addSFX205">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3049();">
+          <img id="gifHover49" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_205.jpg" />
+          <audio id="mp3205"> 
+          <source src="SFX/Impact_049_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 049</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX206" id="addSFX206">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3050();">
+          <img id="gifHover50" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_206.jpg" />
+          <audio id="mp3206"> 
+          <source src="SFX/Impact_050_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 050</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX207" id="addSFX207">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3051();">
+          <img id="gifHover51" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_207.jpg" />
+          <audio id="mp3207"> 
+          <source src="SFX/Impact_051_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 051</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX208" id="addSFX208">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3052();">
+          <img id="gifHover52" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_208.jpg" />
+          <audio id="mp3208"> 
+          <source src="SFX/Impact_052_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 052</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX209" id="addSFX209">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3053();">
+          <img id="gifHover53" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_209.jpg" />
+          <audio id="mp3209"> 
+          <source src="SFX/Impact_053_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 053</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX210" id="addSFX210">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3054();">
+          <img id="gifHover54" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_210.jpg" />
+          <audio id="mp3210"> 
+          <source src="SFX/Impact_054_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 054</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-sm-6">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX211" id="addSFX211">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3055();">
+          <img id="gifHover55" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_211.jpg" />
+          <audio id="mp3211"> 
+          <source src="SFX/Impact_055_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 055</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX212" id="addSFX212">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3056();">
+          <img id="gifHover56" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_212.jpg" />
+          <audio id="mp3212"> 
+          <source src="SFX/Impact_056_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 056</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX213" id="addSFX213">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3057();">
+          <img id="gifHover57" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_213.jpg" />
+          <audio id="mp3213"> 
+          <source src="SFX/Impact_057_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 057</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX214" id="addSFX214">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3058();">
+          <img id="gifHover58" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_214.jpg" />
+          <audio id="mp3214"> 
+          <source src="SFX/Impact_058_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 058</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX215" id="addSFX215">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3059();">
+          <img id="gifHover59" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_215.jpg" />
+          <audio id="mp3215"> 
+          <source src="SFX/Impact_059_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 059</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX216" id="addSFX216">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3060();">
+          <img id="gifHover60" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_216.jpg" />
+          <audio id="mp3216"> 
+          <source src="SFX/Impact_060_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 060</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX217" id="addSFX217">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3061();">
+          <img id="gifHover61" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_217.jpg" />
+          <audio id="mp3217"> 
+          <source src="SFX/Impact_061_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 061</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX218" id="addSFX218">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3062();">
+          <img id="gifHover62" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_218.jpg" />
+          <audio id="mp3218"> 
+          <source src="SFX/Impact_062_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 062</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX219" id="addSFX219">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3063();">
+          <img id="gifHover63" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_219.jpg" />
+          <audio id="mp3219"> 
+          <source src="SFX/Impact_063_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 063</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX220" id="addSFX220">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3064();">
+          <img id="gifHover64" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_220.jpg" />
+          <audio id="mp3220"> 
+          <source src="SFX/Impact_064_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 064</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX221" id="addSFX221">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3065();">
+          <img id="gifHover65" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_221.jpg" />
+          <audio id="mp3221"> 
+          <source src="SFX/Impact_065_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 065</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX222" id="addSFX222">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3066();">
+          <img id="gifHover66" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_222.jpg" />
+          <audio id="mp3222"> 
+          <source src="SFX/Impact_066_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 066</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX223" id="addSFX223">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3067();">
+          <img id="gifHover67" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_223.jpg" />
+          <audio id="mp3223"> 
+          <source src="SFX/Impact_067_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 067</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX224" id="addSFX224">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3068();">
+          <img id="gifHover68" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_224.jpg" />
+          <audio id="mp3224"> 
+          <source src="SFX/Impact_068_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 068</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX225" id="addSFX225">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3069();">
+          <img id="gifHover69" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_225.jpg" />
+          <audio id="mp3225"> 
+          <source src="SFX/Impact_069_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 069</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX226" id="addSFX226">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3070();">
+          <img id="gifHover70" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_226.jpg" />
+          <audio id="mp3226"> 
+          <source src="SFX/Impact_070_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 070</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX227" id="addSFX227">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3071();">
+          <img id="gifHover71" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_227.jpg" />
+          <audio id="mp3227"> 
+          <source src="SFX/Impact_071_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 071</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX228" id="addSFX228">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3072();">
+          <img id="gifHover72" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_228.jpg" />
+          <audio id="mp3228"> 
+          <source src="SFX/Impact_072_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 072</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX229" id="addSFX229">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3073();">
+          <img id="gifHover73" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_229.jpg" />
+          <audio id="mp3229"> 
+          <source src="SFX/Impact_073_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 073</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX230" id="addSFX230">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3074();">
+          <img id="gifHover74" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_230.jpg" />
+          <audio id="mp3230"> 
+          <source src="SFX/Impact_074_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 074</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX231" id="addSFX231">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3075();">
+          <img id="gifHover75" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_231.jpg" />
+          <audio id="mp3231"> 
+          <source src="SFX/Impact_075_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 075</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX232" id="addSFX232">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3076();">
+          <img id="gifHover76" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_232.jpg" />
+          <audio id="mp3232"> 
+          <source src="SFX/Impact_076_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 076</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX233" id="addSFX233">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3077();">
+          <img id="gifHover77" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_233.jpg" />
+          <audio id="mp3233"> 
+          <source src="SFX/Impact_077_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 077</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX234" id="addSFX234">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3078();">
+          <img id="gifHover78" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_234.jpg" />
+          <audio id="mp3234"> 
+          <source src="SFX/Impact_078_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 078</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX235" id="addSFX235">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3079();">
+          <img id="gifHover79" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_235.jpg" />
+          <audio id="mp3235"> 
+          <source src="SFX/Impact_079_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 079</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX236" id="addSFX236">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3080();">
+          <img id="gifHover80" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_236.jpg" />
+          <audio id="mp3236"> 
+          <source src="SFX/Impact_080_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 080</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX237" id="addSFX237">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3081();">
+          <img id="gifHover81" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_237.jpg" />
+          <audio id="mp3237"> 
+          <source src="SFX/Impact_081_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 081</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX238" id="addSFX238">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3082();">
+          <img id="gifHover82" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_238.jpg" />
+          <audio id="mp3238"> 
+          <source src="SFX/Impact_082_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 082</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX239" id="addSFX239">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3083();">
+          <img id="gifHover83" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_239.jpg" />
+          <audio id="mp3239"> 
+          <source src="SFX/Impact_083_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 083</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX240" id="addSFX240">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3084();">
+          <img id="gifHover84" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_240.jpg" />
+          <audio id="mp3240"> 
+          <source src="SFX/Impact_084_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 084</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-sm-6">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX241" id="addSFX241">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3085();">
+          <img id="gifHover85" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_241.jpg" />
+          <audio id="mp3241"> 
+          <source src="SFX/Impact_085_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 085</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX242" id="addSFX242">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3086();">
+          <img id="gifHover86" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_242.jpg" />
+          <audio id="mp3242"> 
+          <source src="SFX/Impact_086_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Impact 086</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX243" id="addSFX243">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3087();">
+          <img id="gifHover87" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_243.jpg" />
+          <audio id="mp3243"> 
+          <source src="SFX/Keys_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Keys</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-12 col-sm-6 md-4">
+          <div class="col">
+          <div class="cardMotion" id="btnSFX244" id="addSFX244">
+          <a data-menuanchor="firstPage">
+          <div onmouseover="playMp3088();">
+          <img id="gifHover88" style="height:100%;width:100%;max-height:1080px;
+          max-width:1920px;border-radius:8px 8px 0 0;" src="SFX/JPG/SFX_244.jpg" />
+          <audio id="mp3244"> 
+          <source src="SFX/Kiss_1.mp3">
+          </audio></div>
+          </a>
+          </div>
+          
+            <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Kiss</div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          </div>
+          </div>
+          </div>
+          </div>       
+
+            
+        <!-- MOTION -->
+        </div>
+        </div>
+        
+       <!-- MOTION DEPENDENCIES -->
+         </div>
+
+         <!-- FOOTER -->  
+         
+         <footer class="footer-distributed" style="left: 0px;">
+           <div class="container">
+             <div class="row">
+               <div class="row justify-content-start bottomLeftNav">
+                 <div class="footer-brands">
+                   <a span class="pixabay" onclick="window.cep.util.openURLInDefaultBrowser('https://pixabay.com')"><img id="pixabay_logo" style="margin-bottom:-2px;width: 47px;opacity: .6;" src="img/pixabay.png"</img></span></a>
+                 </div>
+                 <div class="footer-brands-2">
+                   <button class="btn btn-dark-right-centre" data-toggle="modal" data-target="#myModal"><img id="dokyu_logo" style="margin-bottom: 10px;" src="img/dokyu_footer.png" width="12"</img><span class="beta"></span></button>
+                 </div>
+               </div>
+               <div class="col-md-2.5 ml-md-auto bottomRightButtons">
+                 <div class="footer-notification">
+                   <button class="btn btn-dark-notification" data-toggle="modal" title="<strong>Library contains sound</strong>"><i data-feather="volume-2" style="width:15px;height:15px;color:#fff;"></i></button>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="js/tippy.min.js"></script>
+        <script src="js/tippyTooltips.js"></script>
+        <!-- IMPORT PAGE-SPECIFIC DEPENDENCIES -->
+        <script src="js/import/SFX_003.js"></script>
+        <!-- GIF PAGE-SPECFIIC DEPENDENCIES -->
+        <script src="js/gif/SFX_003.js"></script>
+        <!-- MP3 PAGE-SPECFIIC DEPENDENCIES -->
+        <script src="js/mp3/SFX_003.js"></script>
+        <script src="js/main.js"></script>        
+        <script>
+          feather.replace()
+        </script>
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123173343-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+
+          gtag('config', 'UA-123173343-1');
+        </script>
+      </body>
+
+</html>

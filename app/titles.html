@@ -1,0 +1,2070 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="robots" content="noindex">
+  <!--<script src="js/CSInterface.js"></script>-->
+  <script src="js/feather.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/tippy.css">
+  <style media="screen">.dropdown-menu {min-width: 50px;max-width: 128px;margin: 43px 10px 10px -98px;}.container {max-width: 100%;}</style>
+</head>
+
+<!-- NAVBAR -->
+
+<body>
+  <nav class="navbar navbar-dark bg-dark navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col topLeftNav">
+          <div class="form-group" style="margin-left: 7px;">
+              <form id="search">
+                <input class="form-control1" data-live-search="true" type="text" placeholder="Search..." style="font-weight:300;visibility: hidden;" />
+                <div class="search-bar-button" type="text">
+                  <i data-feather="search"></i>
+                </div>
+              </form>
+          </div>
+        </div>
+          <select id="selection" class="selectpicker hide-tick" onchange="location = this.options[this.selectedIndex].value;" style="margin:-3px 10px 0px 0px;padding-top: 1px;">
+            <option value="https://demo.3dmybusiness.com/motion.html" selected>Motion</option>
+            <option value="https://demo.3dmybusiness.com/media.html">Media</option>
+          </select>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- MODAL -->
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <p></p>
+          <button class="btn btn-primary-exit" data-dismiss="modal"><i data-feather="x" style="width:15px;height:15px;"></i></button>
+        </div>
+        <div class="modal-body">
+
+
+          <div class="pricing">
+            <h1>Update Log</h1>
+          </div>
+
+          <div class="modal-check">
+            <div class="container">
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v0.5.0 [beta]</h7><button class="btn btn-primary" title="<strong>9 March, 2018 | </strong>Dokyu gets her first public exposure. But carefully does it! Not all the bolts are screwed tightly, yet."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px 0;background-color: #232324;
+      border-radius: 4px;
+      border-top: 10px solid #232324;
+      border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.0.0</h7><button class="btn btn-primary" title="<strong>20 April, 2018 | </strong>Reversing out of the garage, Dokyu does a stylish about-turn into the loving arms of After Effects."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.2.0</h7><button class="btn btn-primary" title="<strong>1 May, 2018 | </strong>Dokyu finds her voice with a live chatbot. If Dokyu starts creaking, you can leave a message for our team and we'll get back to you sharpish."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.5.0</h7><button class="btn btn-primary" title="<strong>30 July, 2018 | </strong>Dokyu gleams as she earns the badge of becoming a full-stack application! A server running concurrently allows Dokyu to make deliveries to users fast and quietly. Dokyu gets yet a new paint-job upgrade to look even more beautiful and user-friendly."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.6.0</h7><button class="btn btn-primary" title="<strong>20 August, 2018 | </strong>Dokyu's media library gets a big upgrade! The studio library now offers 30 flexible scenes and 30 unique transitions that combine to produce over 2 minutes of animated video. More to come soon..."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v1.6.5</h7><button class="btn btn-primary" title="<strong>25 October, 2018 | </strong>Dokyu was updated for CC2019 which introduced a new Javascript expression engine. Legacy expressions have been yoinked out and replaced with modern syntax."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.0 [beta]</h7><button class="btn btn-primary" title="<strong>10 March, 2019 | </strong>The Dokyu 2.0 era has arrived. New VFX template libraries produced at our studio will now be published in real-time through the extension."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.0</h7><button class="btn btn-primary" title="<strong>05 April, 2019 | </strong>Dokyu 2.0 launched with a new flagship library we call ‘typography’. It’s a bold and varied collection of text-driven sequences that can be rendered in 16:9, 9:16 and 1:1. Our studio is actively building more VFX libraries, so check back soon."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              
+              <div class="row" style="margin: 10px 0;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.5 [beta]</h7><button class="btn btn-primary" title="<strong>28 June, 2019 | </strong>15 motion libraries containing 1520 functional and flexible elements are published to Dokyu. We also set aside time to update to a lighter app framework to ensure we can continue publishing new content without app slow-down."><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+              
+              <div class="row" style="margin: 10px 0;background-color: #232324;border-radius: 4px;border-top: 10px solid #232324;border-bottom: 10px solid #232324;">
+                <div class="col" style="text-align:left;margin-left:15px;">
+                  <h7>v2.0.5</h7><button class="btn btn-primary" title="<strong>14 July, 2019 | </strong>The 15 brand new libraries are now available for all Dokyu customers. Enjoy! (As Dokyu is a web app, you'll see the libraries in the panel but won't be able to use them until you update.)"><i data-feather="info" style="width:15px;height:15px;"></i></button>
+                </div>
+                <div class="col-2" style="text-align:right;margin-right:10px;">
+                  <i data-feather="check" style="width:15px;height:15px;margin: 8px 10px 0px 10px;"></i>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="modal-terms">
+            <div class="terms" style="margin:0px 0 5px 0;">
+              <h7><a onclick="window.cep.util.openURLInDefaultBrowser('https://3dmybusiness.com/privacy/')"><u>Privacy Policy</u></a> & <a onclick="window.cep.util.openURLInDefaultBrowser('https://3dmybusiness.com/terms/')"><u>Terms</u></a></h7>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOTION DEPENDENCIES -->
+
+  <div class="presetOverlay presetColour"></div>
+  <div class="presetOverlay"></div>
+  <div class="scrollbar" id="style-3">
+
+
+      <!-- MOTION -->
+
+      <div id="fullpage">
+        <div class="section" id="section0">
+        
+          
+          <!-- LIBRARIES -->
+          
+                    <!-- TITLES -->
+
+                    <div class="slide" id="slide13">
+                    <div class="scrollable-element">
+                    <div class="gridMacro">
+                    <div class="row">
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion">
+                    <a data-menuanchor="firstPage"><a href="overlays.html">
+                        <img style="height:100%;width:100%;max-height:1080px;
+                                max-width:1920px;border-radius:8px;" src="img/UI_Back.svg" />
+                      </a>
+                    </div>
+                    <div class="cardMetaBack">
+                    <div class="row">
+                      <div class="MetaCentre">Back</div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle001" id="addTitle001()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover01" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_001/title_001.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 001</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle002" id="addTitle002()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover02" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_002/title_002.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 002</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle003" id="addTitle003()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover03" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_003/title_003.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 003</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle004" id="addTitle004()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover04" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_004/title_004.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 004</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle005" id="addTitle005()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover05" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_005/title_005.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 005</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle006" id="addTitle006()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover06" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_006/title_006.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 006</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle007" id="addTitle007()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover07" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_007/title_007.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 007</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle008" id="addTitle008()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover08" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_008/title_008.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 008</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle009" id="addTitle009()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover09" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_009/title_009.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 009</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle010" id="addTitle010()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover10" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_010/title_010.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 010</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle011" id="addTitle011()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover11" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_011/title_011.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 011</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle012" id="addTitle012()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover12" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_012/title_012.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 012</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle013" id="addTitle013()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover13" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_013/title_013.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 013</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle014" id="addTitle014()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover14" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_014/title_014.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 014</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle015" id="addTitle015()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover15" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_015/title_015.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 015</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle016" id="addTitle016()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover16" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_016/title_016.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 016</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle017" id="addTitle017()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover17" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_017/title_017.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 017</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle018" id="addTitle018()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover18" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_018/title_018.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 018</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle019" id="addTitle019()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover19" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_019/title_019.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 019</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle020" id="addTitle020()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover20" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_020/title_020.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 020</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle021" id="addTitle021()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover21" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_021/title_021.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 021</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle022" id="addTitle022()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover22" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_022/title_022.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 022</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle023" id="addTitle023()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover23" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_023/title_023.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 023</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle024" id="addTitle024()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover24" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_024/title_024.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 024</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle025" id="addTitle025()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover25" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_025/title_025.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 025</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle026" id="addTitle026()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover26" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_026/title_026.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 026</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle027" id="addTitle027()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover27" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_027/title_027.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 027</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle028" id="addTitle028()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover28" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_028/title_028.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 028</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle029" id="addTitle029()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover29" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_029/title_029.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 029</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle030" id="addTitle030()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover30" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_030/title_030.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 030</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+                    
+                    <div class="col-sm-6">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle031" id="addTitle001()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover31" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_031/title_031.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 031</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle032" id="addTitle002()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover32" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_032/title_032.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 032</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle033" id="addTitle003()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover33" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_033/title_033.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 033</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle034" id="addTitle004()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover34" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_034/title_034.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 034</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle035" id="addTitle005()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover35" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_035/title_035.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 035</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle036" id="addTitle006()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover36" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_036/title_036.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 036</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle037" id="addTitle007()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover37" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_037/title_037.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 037</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle038" id="addTitle008()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover38" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_038/title_038.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 038</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle039" id="addTitle009()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover39" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_039/title_039.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 039</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle040" id="addTitle010()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover40" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_040/title_040.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 040</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle041" id="addTitle011()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover41" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_041/title_041.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 041</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle042" id="addTitle012()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover42" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_042/title_042.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 042</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle043" id="addTitle013()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover43" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_043/title_043.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 043</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle044" id="addTitle014()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover44" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_044/title_044.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 044</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle045" id="addTitle015()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover45" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_045/title_045.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 045</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle046" id="addTitle016()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover46" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_046/title_046.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 046</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle047" id="addTitle017()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover47" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_047/title_047.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 047</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle048" id="addTitle018()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover48" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_048/title_048.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 048</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle049" id="addTitle019()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover49" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_049/title_049.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 049</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle050" id="addTitle020()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover50" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_050/title_050.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 050</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle051" id="addTitle021()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover51" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_051/title_051.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 051</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle052" id="addTitle022()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover52" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_052/title_052.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 052</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle053" id="addTitle023()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover53" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_053/title_053.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 053</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle054" id="addTitle024()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover54" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_054/title_054.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 054</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle055" id="addTitle025()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover55" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_055/title_055.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 055</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle056" id="addTitle026()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover56" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_056/title_056.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 056</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle057" id="addTitle027()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover57" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_057/title_057.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 057</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle058" id="addTitle028()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover58" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_058/title_058.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 058</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle059" id="addTitle029()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover59" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_059/title_059.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 059</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle060" id="addTitle030()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover60" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_060/title_060.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 060</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+                    
+                    <div class="col-sm-6">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle061" id="addTitle001()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover61" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_061/title_061.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 061</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle062" id="addTitle002()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover62" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_062/title_062.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 062</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle063" id="addTitle003()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover63" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_063/title_063.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 063</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle064" id="addTitle004()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover64" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_064/title_064.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 064</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle065" id="addTitle005()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover65" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_065/title_065.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 065</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle066" id="addTitle006()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover66" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_066/title_066.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 066</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle067" id="addTitle007()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover67" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_067/title_067.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 067</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle068" id="addTitle008()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover68" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_068/title_068.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 068</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle069" id="addTitle009()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover69" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_069/title_069.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 069</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle070" id="addTitle010()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover70" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_070/title_070.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 070</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle071" id="addTitle011()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover71" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_071/title_071.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 071</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle072" id="addTitle012()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover72" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_072/title_072.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 072</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle073" id="addTitle013()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover73" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_073/title_073.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 073</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle074" id="addTitle014()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover74" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_074/title_074.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 074</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle075" id="addTitle015()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover75" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_075/title_075.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 075</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle076" id="addTitle016()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover76" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_076/title_076.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 076</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle077" id="addTitle017()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover77" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_077/title_077.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 077</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle078" id="addTitle018()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover78" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_078/title_078.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 078</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle079" id="addTitle019()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover79" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_079/title_079.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 079</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle080" id="addTitle020()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover80" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_080/title_080.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 080</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle081" id="addTitle021()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover81" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_081/title_081.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 081</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle082" id="addTitle022()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover82" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_082/title_082.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 082</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle083" id="addTitle023()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover83" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_083/title_083.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 083</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle084" id="addTitle024()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover84" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_084/title_084.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 084</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle085" id="addTitle025()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover85" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_085/title_085.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 085</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle086" id="addTitle026()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover86" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_086/title_086.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 086</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle087" id="addTitle027()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover87" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_087/title_087.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 087</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle088" id="addTitle028()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover88" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_088/title_088.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 088</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle089" id="addTitle029()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover89" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_089/title_089.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 089</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle090" id="addTitle030()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover90" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_090/title_090.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 090</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+                    
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle091" id="addTitle021()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover91" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_091/title_091.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 091</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle092" id="addTitle022()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover92" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_092/title_092.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 092</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle093" id="addTitle023()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover93" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_093/title_093.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 093</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle094" id="addTitle024()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover94" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_094/title_094.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 094</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle095" id="addTitle025()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover95" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_095/title_095.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 095</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle096" id="addTitle026()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover96" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_096/title_096.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 096</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle097" id="addTitle027()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover97" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_097/title_097.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 097</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle098" id="addTitle028()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover98" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_098/title_098.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 098</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle099" id="addTitle029()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover99" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_099/title_099.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 099</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 md-4">
+                    <div class="col">
+                    <div class="cardMotion" id="btnTitle100" id="addTitle030()">
+                    <a data-menuanchor="firstPage">
+                      <img id="gifHover100" style="height:100%;width:100%;max-height:1080px;
+                      max-width:1920px;border-radius:8px 8px 0 0;" src="titles/title_100/title_100.jpg" />
+                    </a>
+                    </div>
+                    
+                      <div class="cardMeta">
+            <div class="row">
+              <!--<div class="MetaOne" title="This template is locked"><span class="stackIt"><i data-feather="lock" style="width:15px;height:15px;"></i><div class="MetaText"></div></span></div>-->
+              <div class="MetaCentre">Title 100</div>
+            </div>
+          </div>
+                    </div>
+                    </div>
+
+                    </div>
+                    </div>
+                    </div>
+                    </div>      
+
+            
+        <!-- MOTION -->
+        </div>
+        </div>
+        
+       <!-- MOTION DEPENDENCIES -->
+         </div>
+
+        <!-- FOOTER -->
+
+        <footer class="footer-distributed" style="left: 0px;">
+          <div class="container">
+            <div class="row">
+              <div class="row justify-content-start bottomLeftNav">
+                <div class="footer-brands">
+                  <a span class="pixabay" onclick="window.cep.util.openURLInDefaultBrowser('https://pixabay.com')"><img id="pixabay_logo" style="margin-bottom:-2px;width: 47px;opacity: .6;" src="img/pixabay.png"</img></span></a>
+                </div>
+                <div class="footer-brands-2">
+                  <button class="btn btn-dark-right-centre" data-toggle="modal" data-target="#myModal"><img id="dokyu_logo" style="margin-bottom: 10px;" src="img/dokyu_footer.png" width="12"</img><span class="beta"></span></button>
+                </div>
+              </div>
+              <div class="col-md-2.5 ml-md-auto bottomRightButtons">
+              </div>
+            </div>
+          </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="js/tippy.min.js"></script>
+        <script src="js/tippyTooltips.js"></script>
+        <!-- IMPORT PAGE-SPECIFIC DEPENDENCIES -->
+        <script src="js/import/titles.js"></script>
+        <!-- GIF PAGE-SPECFIIC DEPENDENCIES -->
+        <script src="js/gif/titles.js"></script>
+        <!-- MP3 PAGE-SPECFIIC DEPENDENCIES -->
+        <script src="js/main.js"></script>        
+        <script>
+          feather.replace()
+        </script>
+                
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123173343-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+
+          gtag('config', 'UA-123173343-1');
+        </script>
+      </body>
+
+</html>
