@@ -403,9 +403,8 @@
             });
             video.appendTo($(this));
             var vid = document.getElementById("video1");
-            vid.onloadeddata = function () {
+            vid.oncanplay = function () {
                 $(".loader").remove();
-
             };
             $this.find('img').hide();
 

@@ -4,6 +4,16 @@
     min-width: auto !important;
     float: left;
 }
+
+.scrollbar {
+  height: calc(100% - 117px) !important;
+  width: 100%;
+  padding: 0 20px !important;
+  overflow-y: scroll;
+  background-color: transparent;
+  /* position: absolute; */
+  overflow-x: hidden;
+}
 }
 .flex-images .item {
   width: 640px!important;
