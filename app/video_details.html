@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Chat</title>
+  <title>Video details</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -235,7 +235,7 @@
           $("#File-size-small").html(SmallVedioSize);
           $("#File-size-tiny").html(TinyVedioSize);
 
-          $('#video-duration').html(hit.duration);
+          $('#video-duration').html(hit.duration + ' sec');
           $('#video-category').html(hit.tags);
           $('#video-Resolution').html(hit.videos.large.width + 'x' + hit.videos.large.height);
 

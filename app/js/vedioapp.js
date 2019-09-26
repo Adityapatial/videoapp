@@ -72,6 +72,7 @@
     }
 
     function sidebarDiskBox() {
+
         var Param = BayStorage.History.Download.read();
         var id = [];
 
@@ -85,11 +86,11 @@
             var GetParam = PixaAPI.Get.Image.Param.Default;
             GetParam['id'] = id;
 
-            BayTemplate.wipe('.info .disk .flex-images');
+            BayTemplate.wipe('.info .disk .main-video');
             PixaAPI.Get.Image.request(GetParam, function (response) {
 
                 response['hits'].forEach(function (data) {
-                    var template = BayTemplate.open('.info .disk .flex-images');
+                    var template = BayTemplate.open('.info .disk .main-video');
 
                     template.element.setAttribute('data-w', data['webformatWidth']);
                     template.element.setAttribute('data-h', data['webformatHeight']);
@@ -101,8 +102,8 @@
 
                     var saved = BayTemplate.saveAsElement(template);
 
-                    var l = document.querySelector('.info .disk .flex-images .left');
-                    var r = document.querySelector('.info .disk .flex-images .right');
+                    // var l = document.querySelector('.info .disk .flex-images .left');
+                    // var r = document.querySelector('.info .disk .flex-images .right');
 
                     if (document.querySelector('.info').clientWidth >= 436) {
                         saved.getElementsByTagName('img')[0].style.height = (((document.querySelector('.info').clientWidth / 2) - 10) * parseInt(data['webformatHeight'])) / parseInt(data['webformatWidth']) + 'px';
@@ -139,7 +140,7 @@
         document.querySelector('.configuration').style.display = "none";
         document.querySelector('.disk').style.display = "block";
 
-        new flexImages({ selector: '.info .disk .flex-images', rowHeight: 175 });
+        new flexImages({ selector: '.info .disk .main-video', rowHeight: 175 });
     }
 
     function downloadBox() {
@@ -155,6 +156,7 @@
     }
 
     function searchBox() {
+
         setTimeout(function () {
             document.querySelector('form#search').dispatchEvent(new Event('submit'));
         }, 1000);
@@ -200,46 +202,26 @@
             var Param = BayStorage.Configuration.Search.read();
             Param['q'] = this.getElementsByTagName('input')[0].value;
             Param['per_page'] = 200;
-            //Param['response_group'] = 'high_resolution';
-
-
-            BayTemplate.wipe('.info .search-result .flex-images');
-
+            BayTemplate.wipe('.info .search-result .main-video');
             PixaAPI.Search.Image.request(Param, function (response) {
-                response['hits'].forEach(function (data) {
-                    //debugger
-                    var template = BayTemplate.open('.info .search-result .flex-images');
 
-                    template.element.setAttribute('data-w', data['webformatWidth']);
-                    template.element.setAttribute('data-h', data['webformatHeight']);
-                    template.element.setAttribute('data-src', data['videos']['tiny']['url']);
-                    template.element.setAttribute('data-authorname', data['user']);
-                    //  template.element.setAttribute('data-picture', data['pageURL']);
-                    template.element.setAttribute('data-id', data['id']);
+                var $main = $('.info .search-result .main-video');
+                var Totalrecords = response['totalHits'];
+                if (Totalrecords == 0) {
+                    $main.append(' <span style="color: white">No record found</span>');
+                }
+                else {
+                    response['hits'].forEach(function (data) {
+                        var $src = 'https://i.vimeocdn.com/video/' + data['picture_id'] + '_600x350.jpg';
+                        var videoImageHtml = '<div class="vedio-con1" data-src="' + data['videos']['tiny']['url'] + '" data-id="' + data['id'] + '" ">\
+                       <img src="'+ $src + '" />\
+                       </div>';
+                        if (videoImageHtml != null && videoImageHtml != '') {
+                            $main.append(videoImageHtml);
+                        }
+                    });
 
-                    //template.element.getElementsByTagName('img')[0].setAttribute('src', PixaAPI.Search.Image.changeResolution(data['webformatURL'], '_640'));
-
-                    template.element.getElementsByTagName('img')[0].setAttribute('src', 'https://i.vimeocdn.com/video/' + data['picture_id'] + '_640x360.jpg');
-                    var saved = BayTemplate.saveAsElement(template);
-                    var l = document.querySelector('.info .search-result .flex-images .left');
-                    var r = document.querySelector('.info .search-result .flex-images .right');
-
-                    if (document.querySelector('.info').clientWidth >= 436) {
-                        saved.getElementsByTagName('img')[0].style.height = (((document.querySelector('.info').clientWidth / 2) - 10) * parseInt(data['webformatHeight'])) / parseInt(data['webformatWidth']) + 'px';
-                    } else {
-                        saved.getElementsByTagName('img')[0].style.height = ((document.querySelector('.info').clientWidth - 10) * parseInt(data['webformatHeight'])) / parseInt(data['webformatWidth']) + 'px';
-                    }
-
-                    // if (parseInt(l.dataset.h) >= parseInt(r.dataset.h)) {
-                    //     r.appendChild(saved);
-                    //     r.dataset.h = parseInt(r.dataset.h) + parseInt(data['webformatHeight']);
-                    // } else {
-                    //     l.appendChild(saved);
-                    //     l.dataset.h = parseInt(l.dataset.h) + parseInt(data['webformatHeight']);
-                    // }
-
-
-                });
+                }
 
             }, function (response) {
 
@@ -329,7 +311,7 @@
 
         });
 
-        var fi = document.querySelectorAll('.flex-images');
+        var fi = document.querySelectorAll('.main-video');
 
         for (var i = 0; i < fi.length; i++) {
 
@@ -375,19 +357,18 @@
                     document.querySelector('.downloadable img').src = "";
                 }
             });
-
-
         }
 
-
+        $('.form-control1').focus();
         sidebar();
         // downloadBox();
         searchBox();
         var video;
         var cv;
-        $(document).on("mouseenter", ".item.active", function () {
+        $(document).on("mouseenter", ".vedio-con1", function () {
+
             var $this = $(this);
-            $(this).append('<div class="loader"></div>')
+            $(this).append('<div class="loader"></div>');
             var VedioUrl = $(this).data("src");
             video = $('<video />', {
                 id: 'video1',
@@ -397,33 +378,30 @@
                 autoplay: "autoplay",
                 muted: "",
                 loop: "loop",
-                Height: 360,
-                Width: 640,
+                // Height: 600,
+                //  Width: 350,
                 poster: $this.find('img').attr('src')
             });
             video.appendTo($(this));
             var vid = document.getElementById("video1");
-            vid.oncanplay = function () {
+            vid.onloadeddata = function () {
                 $(".loader").remove();
+                //vid.play();
             };
             $this.find('img').hide();
-
-
         });
-        $(document).on("mouseleave", ".item.active", function () {
+        $(document).on("mouseleave", ".vedio-con1", function () {
+
             $(this).find(video).remove();
             $(this).find('img').show();
             $(".loader").remove();
         });
-        $(document).on("click", ".item.active.hostBorder", function () {
+        $(document).on("click", ".vedio-con1", function () {
             var VedioId = $(this).data("id");
 
-            var url = "/video_details.html?sent=" + VedioId;
+            var url = "/appvideo/video_details.html?sent=" + VedioId;
             $(location).attr('target', '_blank');
             $(location).attr('href', url);
-
-
-
         });
     }
 

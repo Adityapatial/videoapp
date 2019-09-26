@@ -49,6 +49,67 @@
       position: absolute;
       overflow-x: hidden
     }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .main-video {
+      width: 100%;
+    }
+
+    .vedio-con1 {
+      width: 460px;
+      height: 275px;
+      float: left;
+      padding: 2px 3px;
+      z-index: 99999;
+    }
+
+    .vedio-con1 img {
+      width: 100%;
+      height: auto;
+      padding: 0;
+
+    }
+
+    .vedio-con1 video {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      display: block;
+      padding: 0 !important;
+      height: 275px;
+
+    }
+
+    @media screen and (max-width: 700px) {
+      .vedio-con1 {
+        width: 50%;
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      .vedio-con1 {
+        width: 100%;
+
+      }
+
+      .loader {
+        border: 8px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 8px solid #d1ad25;
+        width: 55px;
+        height: 55px;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+        position: absolute;
+        margin: 20% 40%;
+
+      }
+
+
+    }
   </style>
 </head>
 
@@ -67,6 +128,7 @@
                   style="font-weight:300;" />
                 <div class="search-bar-button" type="text">
                   <i data-feather="search"></i>
+
                 </div>
               </form>
             </div>
@@ -74,9 +136,12 @@
         </div>
         <select id="selection" class="selectpicker hide-tick"
           onchange="location = this.options[this.selectedIndex].value;">
-          <option value="https://demo.3dmybusiness.com/motion.html">Motion</option>
+          <!-- <option value="https://demo.3dmybusiness.com/motion.html">Motion</option>
           <option value="https://demo.3dmybusiness.com/media.html" selected>Media</option>
-          <option value="https://demo.3dmybusiness.com/vedio.html" selected>Vedio</option>
+          <option value="https://demo.3dmybusiness.com/vedio.html" selected>Video</option> -->
+          <option value="http://localhost:3000/motion.html">Motion</option>
+          <option value="http://localhost:3000/media.html">Media</option>
+          <option value="http://localhost:3000/vedio.html" selected>Video</option>
         </select>
       </div>
     </div>
@@ -277,14 +342,14 @@
               </div>
               <div class="info hostBgdLight">
                 <div class="search-result active">
-                  <div template=".info .search-result .flex-images" class="item active hostBorder">
+                  <div template=".info .search-result .main-video" class="item active hostBorder">
                     <img src="img/background/blank.gif" draggable="false">
                   </div>
-                  <div template-default=".info .search-result .flex-images">
+                  <div template-default=".info .search-result .main-video">
                     <div class="left" data-h="0"></div>
-
                   </div>
-                  <div class="flex-images">
+
+                  <div class="main-video">
 
                   </div>
                 </div>
