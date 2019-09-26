@@ -399,7 +399,7 @@
         $(document).on("click", ".vedio-con1", function () {
             var VedioId = $(this).data("id");
 
-            var url = "/appvideo/video_details.html?sent=" + VedioId;
+            var url = "/videoapp/app/video_details.html?sent=" + VedioId;
             $(location).attr('target', '_blank');
             $(location).attr('href', url);
         });
